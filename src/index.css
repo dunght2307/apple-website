@@ -9,8 +9,9 @@
 }
 
 body {
-  color: white;
-  width: 100dvw;
+  color: #fff;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
   overflow-x: hidden;
   height: 100%;
   background: #000;
@@ -22,24 +23,13 @@ canvas {
   touch-action: none;
 }
 
-.screen-max-width {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  position: relative;
-  max-width: 1120px;
-}
-
 @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
   }
 
-  .nav-height {
-    @apply h-[calc(100vh-60px)];
-  }
-
   .btn {
-    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
+    @apply px-4 py-1 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
   }
 
   .color-container {
@@ -54,8 +44,12 @@ canvas {
     @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all;
   }
 
-  .common-padding {
-    @apply sm:py-32 py-20 sm:px-10 px-5;
+  .viewport-content {
+    @apply ms-auto me-auto max-w-[1680px] w-[87.5%];
+  }
+
+  .section {
+    @apply lg:py-40 py-20;
   }
 
   .section-heading {
@@ -87,7 +81,7 @@ canvas {
   }
 
   .hero-title {
-    @apply text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10;
+    @apply text-center font-semibold text-xl lg:text-2xl xl:text-3xl text-white;
   }
 
   .hiw-title {

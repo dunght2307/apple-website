@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        blue: "#2997FF",
+        blue: "#0071e3",
+        white: "#f5f5f7",
         gray: {
           DEFAULT: "#86868b",
           100: "#94928d",
@@ -12,6 +13,16 @@ export default {
           300: "#42424570",
         },
         zinc: "#101010",
+      },
+      keyframes: {
+        fadeAnimation: {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
       },
     },
   },
