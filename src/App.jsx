@@ -7,16 +7,18 @@ import Features from "./components/Features";
 import * as Sentry from "@sentry/react";
 import HowItWorks from "./components/HowItWorks";
 import Footer from "./components/Footer";
+import Ribbon from "./components/Ribbon";
 
 const App = () => {
   return (
     <main className="bg-black">
       <Navbar />
+      <Ribbon />
       <Hero />
       <Highlights />
-      <Model />
-      <Features />
-      <HowItWorks />
+      {/* <Model /> */}
+      {/* <Features /> */}
+      {/* <HowItWorks /> */}
       <Footer />
     </main>
   );
