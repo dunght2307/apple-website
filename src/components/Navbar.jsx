@@ -33,11 +33,11 @@ const Navbar = () => {
   });
 
   return (
-    <header className="w-full relative">
+    <header className="w-full absolute z-[2000] top-0 left-0">
       {/* Navbar 1 */}
       <div
         className={`w-full h-[44px] transition-all duration-200 ${
-          subNavLink || openSearch || openCart ? "bg-zinc" : ""
+          subNavLink || openSearch || openCart ? "bg-zinc" : "bg-transparent"
         }`}
       >
         <nav className="flex justify-between items-center max-w-[1024px] w-full h-[44px] mx-auto px-4 lg:px-5  ">
@@ -409,7 +409,7 @@ const Navbar = () => {
 
       {/* Navbar 2 */}
       <div
-        className={`bg-[#161617cc]/80 w-full fixed left-0 right-0 z-[1000] h-[52px] border-b-[1px] border-[#4b4b4b] transition-all ease-linear duration-500 ${
+        className={`bg-[#161617cc]/80 fixed left-0 right-0 z-[1000] h-[52px] border-b-[1px] border-[#4b4b4b] transition-all ease-linear duration-500 ${
           openSubLink ? "bg-zinc" : "backdrop-saturate-100 backdrop-blur-lg"
         } ${nav2 ? "top-0" : "-top-full"}`}
       >
