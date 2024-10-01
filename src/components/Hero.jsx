@@ -54,26 +54,20 @@ const Hero = () => {
         </div>
         <div
           id="cta"
-          className="viewport-content flex flex-col items-center opacity-0 translate-y-20"
+          className="p-4 flex flex-col items-center opacity-0 translate-y-20"
         >
           <a href="#hightlights" className="btn">
             Buy
           </a>
-          <p className="font-semibold text-gray relative">
+          <p className="lg:text-lg font-semibold text-gray">
             From $999 or $41.62/mo. for 24 mo.{" "}
-            <a
-              href=""
-              className="absolute text-[10px] -top-[1px] -right-2 border-b-[1px]"
-            >
+            <a href="" className="font-feature-settings">
               1
             </a>
           </p>
-          <p className="font-normal text-gray relative">
+          <p className="lg:text-lg font-normal text-gray relative">
             Apple Intelligence coming this fall{" "}
-            <a
-              href=""
-              className="absolute text-[10px] -top-[1px] -right-2 border-b-[1px]"
-            >
+            <a href="" className="font-feature-settings">
               2
             </a>
           </p>

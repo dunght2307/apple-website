@@ -17,13 +17,10 @@ const Ribbon = () => {
       className="w-full py-4 px-4 md:px-5 bg-zinc absolute top-[44px] left-0 z-[3] opacity-0 scale-110"
     >
       <div className="text-white text-center text-sm viewport-content">
-        <p className="inline-block relative mr-3">
+        <p className="inline-block mr-3">
           Get $180–$650 in credit toward iPhone 16 or iPhone 16 Pro when you
           trade in iPhone 12 or higher.{" "}
-          <a
-            href=""
-            className="absolute text-[10px] -top-[0px] -right-2 border-b-[2px] leading-none"
-          >
+          <a href="" className="font-feature-settings">
             *
           </a>
         </p>

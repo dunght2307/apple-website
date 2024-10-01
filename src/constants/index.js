@@ -12,8 +12,10 @@ import {
   flashLightIcon,
   focusIcon,
   highlightFirstVideo,
+  highlightFivethVideo,
   highlightFourthVideo,
   highlightSecondVideo,
+  highlightSixthVideo,
   highlightThirdVideo,
   iphoneAirPodsImg,
   iphoneApplewatchImg,
@@ -453,34 +455,53 @@ export const highlightsSlides = [
   {
     id: 1,
     textLists: [
-      "Enter A17 Pro.",
-      "Game‑changing chip.",
-      "Groundbreaking performance.",
+      "The first iPhone built for Apple Intelligence. ",
+      "Personal, private, powerful",
     ],
     video: highlightFirstVideo,
-    videoDuration: 4,
+    videoDuration: 5,
   },
   {
     id: 2,
-    textLists: ["Titanium.", "So strong. So light. So Pro."],
+    textLists: [
+      "So fast. So fluid.",
+      "Get a feel for the all-new Camera Control.",
+    ],
     video: highlightSecondVideo,
     videoDuration: 5,
   },
   {
     id: 3,
     textLists: [
-      "iPhone 15 Pro Max has the",
-      "longest optical zoom in",
-      "iPhone ever. Far out.",
+      "4K 120 fps Dolby Vision",
+      "4 studio-quality mics.",
+      "A Pro studio in your pocket.",
     ],
     video: highlightThirdVideo,
-    videoDuration: 2,
+    videoDuration: 7,
   },
   {
     id: 4,
-    textLists: ["All-new Action button.", "What will yours do?."],
+    textLists: [
+      "Our thinnest borders yet — for even larger displays. Brilliant.",
+    ],
     video: highlightFourthVideo,
-    videoDuration: 3.63,
+    videoDuration: 3,
+  },
+  {
+    id: 5,
+    textLists: [
+      "All-new A18 Pro chip powers unrivaled intelligence.",
+      "And unprecedented performance.",
+    ],
+    video: highlightFivethVideo,
+    videoDuration: 7,
+  },
+  {
+    id: 6,
+    textLists: ["A huge leap in battery life.", "Game on."],
+    video: highlightSixthVideo,
+    videoDuration: 3,
   },
 ];
 
@@ -551,9 +572,9 @@ export const models = [
 
 export const modelsFM = [
   {
-    id: 6,
+    id: 0,
     title: "6.3” iPhone 16 Pro3 in four colors",
-    color: "#977e6b",
+    color: "",
     img: allColorsImg,
   },
   {

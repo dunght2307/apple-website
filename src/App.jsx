@@ -11,14 +11,14 @@ import Ribbon from "./components/Ribbon";
 
 const App = () => {
   return (
-    <main className="bg-black">
+    <main className="bg-black font-inter">
       <Navbar />
       <Ribbon />
       <Hero />
       <Highlights />
-      {/* <Model /> */}
-      {/* <Features /> */}
-      {/* <HowItWorks /> */}
+      <Model />
+      {/* <Features />
+      <HowItWorks /> */}
       <Footer />
     </main>
   );

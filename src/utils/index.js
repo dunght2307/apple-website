@@ -4,10 +4,12 @@ export const heroImg = hero;
 
 import hmv from "/assets/videos/hero.mp4";
 import smallmv from "/assets/videos/smallHero.mp4";
-import highlightFirstmv from "/assets/videos/highlight-first.mp4";
-import highlightSectmv from "/assets/videos/hightlight-third.mp4";
-import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
-import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
+import highlightFirstmv from "/assets/videos/highlight-first-1.mp4";
+import highlightSectmv from "/assets/videos/highlight-sec-2.mp4";
+import highlightThirdmv from "/assets/videos/highlight-third-3.mp4";
+import highlightFivethmv from "/assets/videos/highlight-fiveth-5.mp4";
+import highlightFourth from "/assets/videos/highlight-4.mp4";
+import highlightSixth from "/assets/videos/highlight-6.mp4";
 import exploremv from "/assets/videos/explore.mp4";
 import framemv from "/assets/videos/frame.mp4";
 
@@ -123,7 +125,10 @@ export const smallHeroVideo = smallmv;
 export const highlightFirstVideo = highlightFirstmv;
 export const highlightSecondVideo = highlightSectmv;
 export const highlightThirdVideo = highlightThirdmv;
-export const highlightFourthVideo = highlightFourthmv;
+export const highlightFivethVideo = highlightFivethmv;
+export const highlightFourthVideo = highlightFourth;
+export const highlightSixthVideo = highlightSixth;
+
 export const exploreVideo = exploremv;
 export const frameVideo = framemv;
 
