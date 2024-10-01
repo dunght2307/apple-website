@@ -2,12 +2,12 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ModelView from "./ModelView";
 import { useEffect, useRef, useState } from "react";
-import { yellowImg } from "../utils";
+import { allColorsImg, yellowImg } from "../utils";
 
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
-import { models, sizes } from "../constants";
+import { models, modelsFM, sizes } from "../constants";
 import { animateWithGsapTimeLine } from "../utils/animations";
 
 const Model = () => {
@@ -16,6 +16,12 @@ const Model = () => {
     title: "Iphone 15 Pro in Natural Titanium",
     color: ["#8F8A81", "#FFE7B9", "#6F6C64"],
     img: yellowImg,
+  });
+  const [modelFM, setModelFM] = useState({
+    id: 0,
+    title: "6.3” iPhone 16 Pro3 in four colors",
+    color: "#977e6b",
+    img: allColorsImg,
   });
 
   //Camera control for model view
@@ -68,13 +74,13 @@ const Model = () => {
   });
 
   return (
-    <section className="common-padding">
-      <div className="screen-max-width">
+    <section className="section overflow-hidden">
+      <div className="viewport-content">
         <h1 id="heading" className="section-heading">
           Take a closer look
         </h1>
         <div className="flex flex-col items-center mt-5">
-          <div className="w-full h-[75vh] md:h[90vh] overflow-hidden relative">
+          <div className="hidden lg:block w-full h-[75vh] md:h[90vh] overflow-hidden relative">
             <ModelView
               index={1}
               groupRef={small}
@@ -109,14 +115,34 @@ const Model = () => {
               <View.Port />
             </Canvas>
           </div>
-          <div className="mx-auto w-full">
+          <div className="lg:hidden block w-full h-[60vh] sm:h-[80vh] overflow-hidden">
+            <div className={`h-full flex items-center justify-center `}>
+              {modelsFM.map((model, index) => (
+                <img
+                  key={index}
+                  src={model.img}
+                  alt=""
+                  className={`items-center justify-center max-w-[130%] sm:max-w-[110%] first:max-w-full ${
+                    model.title === modelFM.title
+                      ? "block animate-[fadeAnimation_400ms_ease-in-out]"
+                      : "hidden"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto w-full lg:block hidden">
             <p className="text-sm font-light text-center mb-5">{model.title}</p>
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, i) => (
                   <li
                     key={i}
-                    className="w-6 h-6 rounded-full mx-2 cursor-pointer"
+                    className={`w-7 h-7 rounded-full mx-2 cursor-pointer ${
+                      model.title === item.title
+                        ? "border-white border-[2px]"
+                        : ""
+                    }`}
                     style={{ backgroundColor: item.color[0] }}
                     onClick={() => setModel(item)}
                   />
@@ -137,6 +163,27 @@ const Model = () => {
                   </span>
                 ))}
               </button>
+            </div>
+          </div>
+          <div className="mx-auto w-full lg:hidden block">
+            <p className="text-xs font-light text-center mb-5">
+              {modelFM.title}
+            </p>
+            <div className="flex-center">
+              <ul className="color-container">
+                {modelsFM.map((item, i) => (
+                  <li
+                    key={i}
+                    className={`w-7 h-7 rounded-full mx-2 cursor-pointer first:bg-gradient-to-r from-[#000] to-[#977e6b] ${
+                      modelFM.title === item.title
+                        ? "border-white border-[2px]"
+                        : ""
+                    }`}
+                    style={{ backgroundColor: item.color }}
+                    onClick={() => setModelFM(item)}
+                  />
+                ))}
+              </ul>
             </div>
           </div>
         </div>
