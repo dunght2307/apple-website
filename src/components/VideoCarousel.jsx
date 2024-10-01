@@ -51,7 +51,7 @@ const VideoCarousel = () => {
   }, [isEnd, videoId]);
 
   useEffect(() => {
-    if (loadedData.length > 3) {
+    if (loadedData.length > 5) {
       if (!isPlaying) {
         videoRef.current[videoId].pause();
       } else {
@@ -168,7 +168,7 @@ const VideoCarousel = () => {
     <>
       <div className="flex items-center">
         {highlightsSlides.map((list, i) => (
-          <div id="slider" key={list.id} className="sm:pr-20 pr-10">
+          <div id="slider" key={list.id} className="pr-5">
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                 <video
@@ -176,12 +176,10 @@ const VideoCarousel = () => {
                   playsInline={true}
                   preload="auto"
                   muted
-                  className={`${
-                    list.id === 2 && "translate-x-44"
-                  } pointer-events-none`}
+                  className="pointer-events-none max-w-[170%] lg:max-w-full"
                   ref={(el) => (videoRef.current[i] = el)}
                   onEnded={() => {
-                    i !== 3
+                    i !== 5
                       ? handleProcess("video-end", i)
                       : handleProcess("video-last");
                   }}
@@ -198,9 +196,9 @@ const VideoCarousel = () => {
                   <source src={list.video} type="video/mp4" />
                 </video>
               </div>
-              <div className="absolute top-12 left-[5%] z-10">
+              <div className="absolute top-0 left-0 lg:m-12 m-5 z-10 lg:w-[50%]">
                 {list.textLists.map((text) => (
-                  <p key={text} className="md:text-2xl text-xl font-medium">
+                  <p key={text} className="lg:text-3xl font-semibold">
                     {text}
                   </p>
                 ))}
@@ -210,21 +208,6 @@ const VideoCarousel = () => {
         ))}
       </div>
       <div className="relative flex-center mt-10">
-        <div className="flex-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
-          {videoRef.current.map((_, i) => (
-            <span
-              key={i}
-              ref={(el) => (videoDivRef.current[i] = el)}
-              className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
-            >
-              <span
-                className="absolute h-full w-full rounded-full"
-                ref={(el) => (videoSpanRef.current[i] = el)}
-              />
-            </span>
-          ))}
-        </div>
-
         <button className="control-btn">
           <img
             src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
@@ -238,6 +221,30 @@ const VideoCarousel = () => {
             }
           />
         </button>
+
+        <div className="flex-center py-[22px] px-4 bg-gray-300 backdrop-blur rounded-full">
+          {videoRef.current.map((_, i) => (
+            <span
+              key={i}
+              ref={(el) => (videoDivRef.current[i] = el)}
+              className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
+              onClick={() =>
+                setVideo({
+                  videoId: i,
+                  startPlay: false,
+                  isEnd: false,
+                  isLastVideo: false,
+                  isPlaying: false,
+                })
+              }
+            >
+              <span
+                className="absolute h-full w-full rounded-full"
+                ref={(el) => (videoSpanRef.current[i] = el)}
+              />
+            </span>
+          ))}
+        </div>
       </div>
     </>
   );
