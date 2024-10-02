@@ -15,12 +15,12 @@ const Highlights = () => {
       className="section w-screen overflow-hidden h-full bg-zinc"
     >
       <div className="viewport-content">
-        <div className="mb-12 w-full lg:flex items-end justify-between">
-          <h1 id="title" className="section-heading">
+        <div className="mb-12 w-full lg:flex items-baseline justify-between">
+          <h2 id="title" className="section-heading">
             Get the highlights.
-          </h1>
+          </h2>
 
-          <div className="flex flex-wrap items-end gap-5">
+          <div className="flex flex-wrap items-center gap-5">
             <p className="link">
               Watch The Film
               <img src={watchImg} alt="watch" className="ml-2" />

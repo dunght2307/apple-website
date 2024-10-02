@@ -22,16 +22,16 @@ const Ribbon = () => {
           trade in iPhone 12 or higher.{" "}
           <a href="" className="font-feature-settings">
             *
-          </a>
+          </a>{" "}
+          <span>
+            <a
+              href="#"
+              className="text-blue after:content-['>'] after:ml-0.5 hover:underline"
+            >
+              Buy
+            </a>
+          </span>
         </p>
-        <span>
-          <a
-            href="#"
-            className="text-blue after:content-['>'] after:ml-0.5 hover:underline"
-          >
-            Buy
-          </a>
-        </span>
       </div>
     </div>
   );

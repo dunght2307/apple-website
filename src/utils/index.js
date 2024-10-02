@@ -18,6 +18,7 @@ import actionButton from "/assets/videos/action-button-video.mp4";
 import battery from "/assets/videos/battery.mp4";
 import videoHeroSrc from "/assets/videos/heroVideo.mp4";
 import smallVideoHeroSrc from "/assets/videos/smallVideoHero.mp4";
+import featureSrc from "/assets/videos/feature.mp4";
 
 import apple from "/assets/images/apple.svg";
 import search from "/assets/images/search.svg";
@@ -119,6 +120,11 @@ import blackTitanium from "/assets/images/black_titanium_img.jpg";
 import whiteTitanium from "/assets/images/white_titanium_img.jpg";
 import naturalTitanium from "/assets/images/natural_titanium_img.jpg";
 import desertTitanium from "/assets/images/desert_titanium_img.jpg";
+import featureImgSrc from "/assets/images/feature-mobile.jpg";
+import featureItem1Src from "/assets/images/feature-item-1.jpg";
+import featureItem2Src from "/assets/images/feature-item-2.jpg";
+import featureItem3Src from "/assets/images/feature-item-3.jpg";
+import featureItem4Src from "/assets/images/feature-item-4.jpg";
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -137,6 +143,7 @@ export const actionButtonVideo = actionButton;
 export const batteryVideo = battery;
 export const videoHero = videoHeroSrc;
 export const smallVideoHero = smallVideoHeroSrc;
+export const featureVideo = featureSrc;
 
 export const appleImg = apple;
 export const searchImg = search;
@@ -236,3 +243,8 @@ export const blackTitaniumImg = blackTitanium;
 export const whiteTitaniumImg = whiteTitanium;
 export const naturalTitaniumImg = naturalTitanium;
 export const desertTitaniumImg = desertTitanium;
+export const featureImg = featureImgSrc;
+export const featureItem1Img = featureItem1Src;
+export const featureItem2Img = featureItem2Src;
+export const featureItem3Img = featureItem3Src;
+export const featureItem4Img = featureItem4Src;

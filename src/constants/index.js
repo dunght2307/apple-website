@@ -9,6 +9,10 @@ import {
   chevronRightIcon,
   deliveryIcon,
   desertTitaniumImg,
+  featureItem1Img,
+  featureItem2Img,
+  featureItem3Img,
+  featureItem4Img,
   flashLightIcon,
   focusIcon,
   highlightFirstVideo,
@@ -604,8 +608,8 @@ export const modelsFM = [
 ];
 
 export const sizes = [
-  { label: '6.1"', value: "small" },
-  { label: '6.7"', value: "large" },
+  { label: '6.3"', value: "small" },
+  { label: '6.9"', value: "large" },
 ];
 
 export const actionButtonList = [
@@ -735,6 +739,29 @@ export const WaysToShopList = [
     title: "Explore a shopping experience designed around you.",
     desc: "Get $170–$620 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.",
     btn: plusIcon,
+  },
+];
+
+export const FeatureList = [
+  {
+    id: 1,
+    img: featureItem1Img,
+    title: "iPhone 16 Pro Max has our largest iPhone display ever",
+  },
+  {
+    id: 2,
+    img: featureItem2Img,
+    title: "The thinnest borders on any Apple product",
+  },
+  {
+    id: 3,
+    img: featureItem3Img,
+    title: "Premium Grade 5 titanium is exceptionally durable",
+  },
+  {
+    id: 4,
+    img: featureItem4Img,
+    title: "Four striking colors, from Black Titanium to new Desert Titanium",
   },
 ];
 
