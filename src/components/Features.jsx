@@ -1,8 +1,18 @@
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import { animateWithGsap } from "../utils/animations";
-import { explore1Img, explore2Img, exploreVideo } from "../utils";
+import {
+  explore1Img,
+  explore2Img,
+  exploreVideo,
+  featureImg,
+  featureVideo,
+  nextImg,
+  prevImg,
+} from "../utils";
 import gsap from "gsap";
+import { FeatureList } from "../constants";
+import { useState } from "react";
 
 const Features = () => {
   const videoRef = useRef();
@@ -21,89 +31,157 @@ const Features = () => {
       y: 0,
       opacity: 1,
     });
-    animateWithGsap(
-      ".g_grow",
-      {
-        scale: 1,
-        opacity: 1,
-        ease: "power1",
-      },
-      { scrub: 5.5 }
-    );
-    animateWithGsap(".g_text", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 1,
-    });
   }, []);
+
+  const scrollContainerRef = useRef(null);
+  const scrollItemRef = useRef(null);
+  const [current, setCurrent] = useState(1);
+
+  const next = () => {
+    const container = scrollContainerRef.current;
+    const item = scrollItemRef.current;
+    if (container) {
+      const nextScrollLeft = container.scrollLeft + item.offsetWidth;
+      container.scrollTo({
+        left: nextScrollLeft,
+      });
+    }
+    current < FeatureList.length
+      ? setCurrent(current + 1)
+      : setCurrent(FeatureList.length);
+  };
+  const prev = () => {
+    const container = scrollContainerRef.current;
+    const item = scrollItemRef.current;
+    if (container) {
+      const nextScrollLeft = container.scrollLeft - item.offsetWidth;
+      container.scrollTo({
+        left: nextScrollLeft,
+      });
+    }
+    current > 1 ? setCurrent(current - 1) : setCurrent(1);
+  };
+
   return (
-    <section className="h-full common-padding bg-zinc relative overflow-hidden">
-      <div className="csreen-max-width">
-        <div className="mb1-12 w-full">
-          <h1 id="features_title" className="section-heading">
-            Explore the full story
-          </h1>
+    <section className="h-full section overflow-hidden">
+      <div className="mb-20 w-full">
+        <h2 id="features_title" className="section-heading-2 text-center">
+          Strength. Beauty.
+          <br />
+          <span className="text-glow">Titanium.</span>
+        </h2>
+      </div>
+      <div className="flex flex-col justify-center items-center ">
+        <div className="h-full w-full flex-center overflow-hidden">
+          <video
+            id="exploreVideo"
+            className="lg:max-w-full sm:max-w-[200%] md:block hidden"
+            preload="none"
+            muted
+            autoPlay
+            playsInline
+            ref={videoRef}
+          >
+            <source src={featureVideo} type="video/mp4" />
+          </video>
+          <img
+            src={featureImg}
+            alt=""
+            className="md:hidden block max-w-[120%]"
+          />
         </div>
-        <div className="flex flex-col justify-center items-center overflow-hidden">
-          <div className="mt-32 mb-24 pl-24">
-            <h2 className="text-5xl lg:text-7xl font-semibold">IPhone</h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold">
-              Forged In Ttanium
-            </h2>
-          </div>
-          <div className="flex-center flex-col sm:px-10">
-            <div className="relative h-[50vh] w-full flex items-center">
-              <video
-                id="exploreVideo"
-                className="w-full h-full object-cover"
-                preload="none"
-                muted
-                autoPlay
-                playsInline
-                ref={videoRef}
-              >
-                <source src={exploreVideo} type="video/mp4" />
-              </video>
+      </div>
+      <div className="bg-gradient">
+        <div className="viewport-content">
+          <div className="screen-max-width feature-text-container">
+            <div className="flex-1 flex-center w-full">
+              <p className="feature-text">
+                iPhone 16 Pro features a Grade 5 titanium design with a new,
+                refined microblasted finish. Titanium has one of the highest
+                strength-to-weight ratios of any metal, making these models{" "}
+                <span className="text-white">
+                  incredibly strong and impressively light.
+                </span>{" "}
+                iPhone 16 Pro comes in four stunning colors — including new
+                Desert Titanium.
+              </p>
             </div>
-            <div className="flex flex-col w-full relative">
-              <div className="feature-video-container">
-                <div className="overflow-hidden flex-1 h-[50vh]">
-                  <img
-                    src={explore1Img}
-                    alt="titanium"
-                    className="feature-video g_grow"
-                  />
-                </div>
-                <div className="overflow-hidden flex-1 h-[50vh]">
-                  <img
-                    src={explore2Img}
-                    alt="titanium"
-                    className="feature-video g_grow"
-                  />
-                </div>
-              </div>
-              <div className="feature-text-container">
-                <div className="flex-1 flex-center">
-                  <p className="feature-text g_text">
-                    iPhone 15 Pro is {""}
-                    <span className="text-white">
-                      the first iPhone to feature an aerospace‑grade titanium
-                      design
-                    </span>
-                    , using the same alloy that spacecraft use for missions to
-                    Mars.
-                  </p>
-                </div>
-                <div className="flex-1 flex-center">
-                  <p className="feature-text g_text">
-                    Titanium has one of the best strength‑to‑weight ratios of
-                    any metal, making these our{" "}
-                    <span className="text-white">lightest Pro models ever</span>
-                    . You’ll notice the difference the moment you pick one up.
-                  </p>
-                </div>
-              </div>
+            <div className="flex-1 flex-center w-full">
+              <p className="feature-text">
+                Internal design improvements — including a 100 percent recycled
+                aluminum thermal substructure and back glass optimizations that
+                further dissipate heat — enable up to 20 percent{" "}
+                <span className="text-white">better sustained performance</span>{" "}
+                than iPhone 15 Pro. So you can do all the things you love — like
+                high-intensity gaming — for longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="relative">
+          <ul
+            className="flex gap-6 scroll-smooth overflow-x-auto 
+            snap-x snap-mandatory no-scrollbar px-[12.5%]
+          "
+            ref={scrollContainerRef}
+          >
+            {FeatureList.map((item, index) => (
+              <li
+                key={index}
+                className="w-[280px] sm:w-[450px] lg:w-[550px] snap-center cursor-pointer shrink-0"
+                ref={scrollItemRef}
+              >
+                <img src={item.img} alt="" className="w-full rounded-3xl" />
+
+                <p className="p-5 sm:py-8 sm:px-5 text-orange text-lg">
+                  {item.title}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div className="viewport-content flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
+            <button
+              onClick={() => prev()}
+              disabled={current === 1}
+              className={`bg-[#333336] rounded-full flex-center mr-[15px]  ${
+                current === 1 ? "opacity-40" : "opacity-90 hover:opacity-100"
+              }`}
+            >
+              <img src={prevImg} alt="prev" className="max-w-[36px] h-[36px]" />
+            </button>
+            <button
+              onClick={() => next()}
+              disabled={FeatureList.length === current}
+              className={`bg-[#333336] rounded-full flex-center ${
+                current === FeatureList.length
+                  ? "opacity-40"
+                  : "opacity-90 hover:opacity-100 "
+              }`}
+            >
+              <img src={nextImg} alt="next" className="max-w-[36px] h-[36px]" />
+            </button>
+          </div>
+        </div>
+        <div className="viewport-content">
+          <div className="screen-max-width feature-text-container">
+            <div className="flex-1 flex-center w-full">
+              <p className="feature-text">
+                New display technology allows us to route display data under
+                active pixels with no distortion, resulting in thinner borders
+                for larger 6.3-inch and 6.9-inch{" "}
+                <span className="text-white">Super Retina XDR displays</span>{" "}
+                that feel great in the hand.
+              </p>
+            </div>
+            <div className="flex-1 flex-center w-full">
+              <p className="feature-text">
+                iPhone 16 Pro is splash, water, and dust resistant.4 It also has
+                our latest-generation Ceramic Shield material that’s{" "}
+                <span className="text-white">
+                  two times tougher than any smartphone glass
+                </span>{" "}
+                Talk about durable.
+              </p>
             </div>
           </div>
         </div>

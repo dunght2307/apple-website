@@ -8,6 +8,7 @@ import * as Sentry from "@sentry/react";
 import HowItWorks from "./components/HowItWorks";
 import Footer from "./components/Footer";
 import Ribbon from "./components/Ribbon";
+import WaysToShop from "./components/WaysToShop";
 
 const App = () => {
   return (
@@ -17,8 +18,9 @@ const App = () => {
       <Hero />
       <Highlights />
       <Model />
-      {/* <Features />
-      <HowItWorks /> */}
+      <Features />
+      {/* <HowItWorks />
+      <WaysToShop /> */}
       <Footer />
     </main>
   );
