@@ -20,6 +20,11 @@ import videoHeroSrc from "/assets/videos/heroVideo.mp4";
 import smallVideoHeroSrc from "/assets/videos/smallVideoHero.mp4";
 import featureSrc from "/assets/videos/feature.mp4";
 
+import appleIntelligenceVideoSrc from "/assets/videos/apple-intelligence.mp4";
+import appleIntelligence1VideoSrc from "/assets/videos/apple-intelligence-1.mp4";
+import boostYourProductivityVideoSrc from "/assets/videos/boost-your-productivity.mp4";
+import aNewEraForSiriVideoSrc from "/assets/videos/a-new-era-for-siri.mp4";
+
 import apple from "/assets/images/apple.svg";
 import search from "/assets/images/search.svg";
 import bag from "/assets/images/bag.svg";
@@ -83,6 +88,9 @@ import icon_Battery from "/assets/images/icon_battery.png";
 
 import heroAi from "/assets/images/hero_apple_intelligence_headline.png";
 
+import iphoneImgSrc from "/assets/images/iphone.png";
+import iconPrivacyImgSrc from "/assets/images/icon-privacy.png";
+
 import cameraLarge from "/assets/images/camera_large.jpg";
 import prolens1 from "/assets/images/pro_lens1.jpg";
 import prolens2 from "/assets/images/pro_lens2.jpg";
@@ -126,6 +134,18 @@ import featureItem2Src from "/assets/images/feature-item-2.jpg";
 import featureItem3Src from "/assets/images/feature-item-3.jpg";
 import featureItem4Src from "/assets/images/feature-item-4.jpg";
 
+import recordImgSrc from "/assets/images/record.jpg";
+import messagesImgSrc from "/assets/images/messages.jpg";
+import expressYourselfVisuallyImgSrc from "/assets/images/express-yourself-visually.jpg";
+import playgroundAppImgSrc from "/assets/images/playground-app.jpg";
+import cleanUpImgSrc from "/assets/images/clean-up.jpg";
+import languageImgSrc from "/assets/images/language.jpg";
+import instructionsImgSrc from "/assets/images/instructions.jpg";
+import appleIntelligenceImgSrc from "/assets/images/apple-intelligence.jpg";
+import appleIntelligence1ImgSrc from "/assets/images/apple-intelligence-1.jpg";
+import boostYourProductivityImgSrc from "/assets/images/boost-your-productivity.jpg";
+import aNewEraForSiriImgSrc from "/assets/images/a-new-era-for-siri.jpg";
+
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
 export const highlightFirstVideo = highlightFirstmv;
@@ -144,6 +164,11 @@ export const batteryVideo = battery;
 export const videoHero = videoHeroSrc;
 export const smallVideoHero = smallVideoHeroSrc;
 export const featureVideo = featureSrc;
+
+export const appleIntelligenceVideo = appleIntelligenceVideoSrc;
+export const appleIntelligence1Video = appleIntelligence1VideoSrc;
+export const boostYourProductivityVideo = boostYourProductivityVideoSrc;
+export const aNewEraForSiriVideo = aNewEraForSiriVideoSrc;
 
 export const appleImg = apple;
 export const searchImg = search;
@@ -248,3 +273,18 @@ export const featureItem1Img = featureItem1Src;
 export const featureItem2Img = featureItem2Src;
 export const featureItem3Img = featureItem3Src;
 export const featureItem4Img = featureItem4Src;
+
+export const recordImg = recordImgSrc;
+export const messagesImg = messagesImgSrc;
+export const expressYourselfVisuallyImg = expressYourselfVisuallyImgSrc;
+export const playgroundAppImg = playgroundAppImgSrc;
+export const cleanUpImg = cleanUpImgSrc;
+export const languageImg = languageImgSrc;
+export const instructionsImg = instructionsImgSrc;
+export const appleIntelligenceImg = appleIntelligence1ImgSrc;
+export const appleIntelligence1Img = appleIntelligenceImgSrc;
+export const iphoneImg = iphoneImgSrc;
+export const boostYourProductivityImg = boostYourProductivityImgSrc;
+export const aNewEraForSiriImg = aNewEraForSiriImgSrc;
+
+export const iconPrivacyImg = iconPrivacyImgSrc;

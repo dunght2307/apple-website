@@ -1,14 +1,20 @@
 import {
   accessibilityIcon,
   allColorsImg,
+  aNewEraForSiriImg,
+  aNewEraForSiriVideo,
   blackImg,
   blackTitaniumImg,
   blueImg,
+  boostYourProductivityImg,
+  boostYourProductivityVideo,
   cameraIcon,
   carrierIcon,
   chevronRightIcon,
+  cleanUpImg,
   deliveryIcon,
   desertTitaniumImg,
+  expressYourselfVisuallyImg,
   featureItem1Img,
   featureItem2Img,
   featureItem3Img,
@@ -21,14 +27,19 @@ import {
   highlightSecondVideo,
   highlightSixthVideo,
   highlightThirdVideo,
+  instructionsImg,
   iphoneAirPodsImg,
   iphoneApplewatchImg,
   iphoneMacImg,
+  languageImg,
   magnifierIcon,
+  messagesImg,
   naturalTitaniumImg,
   payIcon,
   personalIcon,
+  playgroundAppImg,
   plusIcon,
+  recordImg,
   saveIcon,
   screenAccessibilityImg,
   screenCameraImg,
@@ -895,5 +906,99 @@ export const footerNav = [
       "Events",
       "Contact Apple",
     ],
+  },
+];
+
+export const appleIntelligenceGallery = [
+  {
+    title: "Boost your productivity",
+    heading: "Explore new tools that help you write, focus, and communicate.",
+    item1: {
+      video: boostYourProductivityVideo,
+      img: boostYourProductivityImg,
+      des: [
+        " ",
+        "Writing Tools ",
+        "can proofread your text and rewrite different versions until the tone and wording are just right, and summarize selected text with a tap. They’re available nearly everywhere you write, including third-party apps.",
+      ],
+    },
+    item2: {
+      img: recordImg,
+      des: [
+        "Just hit record in the Notes or Phone app to capture audio recordings and transcripts. Apple Intelligence generates",
+        " summaries ",
+        "of your transcripts, so you can get the most important info at a glance.",
+      ],
+    },
+    item3: {
+      img: messagesImg,
+      des: [
+        "",
+        "Priority messages in Mail ",
+        "of your transcripts, so you can get the most important info at a glance.",
+      ],
+    },
+  },
+  {
+    title: "Express yourself visually",
+    heading: "Create fun, original images that are truly personal to you.",
+    item1: {
+      img: expressYourselfVisuallyImg,
+      des: [
+        "Make a",
+        " Genmoji ",
+        "right in the keyboard to match any conversation. Want to create a disco ball pigeon? You got it. Just provide a description.",
+      ],
+    },
+
+    item2: {
+      img: playgroundAppImg,
+      des: [
+        "The",
+        " Image Playground app ",
+        "lets you create unique images in seconds based on a description, a concept, or even a person from your Photos library. Experiment with image styles like animation, illustration, and sketch.",
+      ],
+    },
+
+    item3: {
+      img: cleanUpImg,
+      des: [
+        "With",
+        " Clean Up ",
+        ", you can remove distracting background objects from your photos with just a tap — so you can perfect a shot while staying true to the original image.",
+      ],
+    },
+  },
+  {
+    title: "A new era for Siri",
+    heading:
+      "With all-new superpowers, Siri will be able to assist you like never before.",
+    item1: {
+      video: aNewEraForSiriVideo,
+      img: aNewEraForSiriImg,
+      des: [
+        "Awareness of your personal context enables Siri to",
+        " help you in ways that are unique to you ",
+        ". Need your passport number while booking a flight? Siri can help find what you’re looking for, without compromising your privacy.",
+      ],
+    },
+
+    item2: {
+      img: languageImg,
+      des: [
+        "",
+        "Richer language understanding ",
+        "and an enhanced voice make communicating with Siri even more natural. For example, if you stumble over your words, Siri still knows what you’re getting at.",
+      ],
+    },
+
+    item3: {
+      img: instructionsImg,
+      des: [
+        "Not sure how to do something on iPhone, like adjust the background blur on a portrait? With expansive product knowledge, Siri can give you",
+        " step-by-step instructions ",
+        "in a snap.",
+      ],
+    },
   },
 ];

@@ -13,9 +13,10 @@ export default {
         "3xl": "1.75rem", //28px
         "4xl": "2rem", //32px
         "5xl": "2.5rem", //40px
-        "6xl": "3.5rem", //56px
-        "7xl": "4rem", //64px
-        "8xl": "5rem", //80px
+        "6xl": "3rem", //48px
+        "7xl": "3.5rem", //56px
+        "8xl": "4rem", //64px
+        "9xl": "5rem", //80px
       },
       colors: {
         blue: "#0071e3",

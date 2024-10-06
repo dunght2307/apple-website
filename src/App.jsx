@@ -9,6 +9,7 @@ import HowItWorks from "./components/HowItWorks";
 import Footer from "./components/Footer";
 import Ribbon from "./components/Ribbon";
 import WaysToShop from "./components/WaysToShop";
+import AppleIntelligence from "./components/AppleIntelligence";
 
 const App = () => {
   return (
@@ -19,8 +20,9 @@ const App = () => {
       <Highlights />
       <Model />
       <Features />
-      {/* <HowItWorks />
-      <WaysToShop /> */}
+      <AppleIntelligence />
+      {/* <HowItWorks /> */}
+      {/* <WaysToShop /> */}
       <Footer />
     </main>
   );
