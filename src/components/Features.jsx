@@ -63,9 +63,12 @@ const Features = () => {
   };
 
   return (
-    <section className="h-full section overflow-hidden">
+    <section className="section-pt">
       <div className="mb-20 w-full">
-        <h2 id="features_title" className="section-heading-2 text-center">
+        <h2
+          id="features_title"
+          className="section-heading-2 text-center text-orange-100 opacity-0 translate-y-20"
+        >
           Strength. Beauty.
           <br />
           <span className="text-glow">Titanium.</span>
@@ -93,9 +96,9 @@ const Features = () => {
       </div>
       <div className="bg-gradient">
         <div className="viewport-content">
-          <div className="screen-max-width feature-text-container">
-            <div className="flex-1 flex-center w-full">
-              <p className="feature-text">
+          <div className="screen-max-width text-container">
+            <div className="flex-1">
+              <p className="text-content">
                 iPhone 16 Pro features a Grade 5 titanium design with a new,
                 refined microblasted finish. Titanium has one of the highest
                 strength-to-weight ratios of any metal, making these models{" "}
@@ -106,8 +109,8 @@ const Features = () => {
                 Desert Titanium.
               </p>
             </div>
-            <div className="flex-1 flex-center w-full">
-              <p className="feature-text">
+            <div className="flex-1">
+              <p className="text-content">
                 Internal design improvements — including a 100 percent recycled
                 aluminum thermal substructure and back glass optimizations that
                 further dissipate heat — enable up to 20 percent{" "}
@@ -121,7 +124,7 @@ const Features = () => {
         <div className="relative">
           <ul
             className="flex gap-6 scroll-smooth overflow-x-auto 
-            snap-x snap-mandatory no-scrollbar px-[12.5%]
+            snap-x snap-mandatory no-scrollbar px-[14%]
           "
             ref={scrollContainerRef}
           >
@@ -163,9 +166,9 @@ const Features = () => {
           </div>
         </div>
         <div className="viewport-content">
-          <div className="screen-max-width feature-text-container">
-            <div className="flex-1 flex-center w-full">
-              <p className="feature-text">
+          <div className="screen-max-width text-container">
+            <div className="flex-1">
+              <p className="text-content">
                 New display technology allows us to route display data under
                 active pixels with no distortion, resulting in thinner borders
                 for larger 6.3-inch and 6.9-inch{" "}
@@ -173,8 +176,8 @@ const Features = () => {
                 that feel great in the hand.
               </p>
             </div>
-            <div className="flex-1 flex-center w-full">
-              <p className="feature-text">
+            <div className="flex-1">
+              <p className="text-content">
                 iPhone 16 Pro is splash, water, and dust resistant.4 It also has
                 our latest-generation Ceramic Shield material that’s{" "}
                 <span className="text-white">

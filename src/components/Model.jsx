@@ -76,10 +76,10 @@ const Model = () => {
   return (
     <section className="section overflow-hidden">
       <div className="viewport-content">
-        <h2 id="heading" className="section-heading">
+        <h2 id="heading" className="section-heading mb-12 sm:mb-16 lg:mb-20">
           Take a closer look
         </h2>
-        <div className="flex flex-col items-center mt-5">
+        <div className="flex flex-col items-center">
           <div className="hidden lg:block w-full h-[75vh] md:h[90vh] overflow-hidden relative">
             <ModelView
               index={1}

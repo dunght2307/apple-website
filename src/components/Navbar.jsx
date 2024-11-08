@@ -59,15 +59,13 @@ const Navbar = () => {
                   <div className="w-full max-w-[1024px] pt-10 pb-20 px-5 flex items-start flex-row gap-20 ">
                     {nav.subLinks.map((links, i) => (
                       <div key={i} className=" ">
-                        <ul>
-                          <h2 className="text-xs text-gray mb-5">
-                            {links.head}
-                          </h2>
+                        <h2 className="text-xs text-gray mb-5">{links.head}</h2>
+                        <ul className="flex gap-2 flex-col">
                           {links.headLink?.map((link, i) => (
                             <li key={i}>
                               <a
                                 href=""
-                                className="text-2xl font-semibold text-white/80 hover:text-white "
+                                className="text-2xl font-semibold text-white/80 hover:text-white"
                               >
                                 {link}
                               </a>
@@ -101,17 +99,23 @@ const Navbar = () => {
               )}
             </div>
           ))}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center -mr-3">
             <div
               onMouseLeave={() => {
                 setOpenSearch(false);
               }}
             >
               <div
-                className="p-[14px] cursor-pointer"
+                className="h-[44px] px-3 cursor-pointer"
                 onClick={() => setOpenSearch(!openSearch)}
               >
-                <img src={searchImg} width={16} height={16} alt="search" />
+                <img
+                  src={searchImg}
+                  width={14}
+                  height={14}
+                  alt="search"
+                  className="h-full"
+                />
               </div>
               <div
                 className={`bg-zinc absolute z-[999] left-0 right-0 lg:top-full top-0 animate-[fadeAnimation_500ms_ease-in-out]  ${
@@ -139,6 +143,7 @@ const Navbar = () => {
                         />
                       </button>
                       <input
+                        id="search"
                         placeholder="Search"
                         autoCorrect="off"
                         autoCapitalize="off"
@@ -158,8 +163,10 @@ const Navbar = () => {
                         <img src={xCircleIcon} alt="" />
                       </button>
                     </div>
-                    <ul className="pt-6 flex gap-2 flex-col">
-                      <h2 className="lg:text-xs text-gray mb-2">Quick Links</h2>
+                    <h2 className="lg:text-xs text-gray mb-3 pt-6">
+                      Quick Links
+                    </h2>
+                    <ul className="flex gap-3 flex-col">
                       {quickLinks.map((link, i) => (
                         <li key={i}>
                           <a
@@ -188,10 +195,16 @@ const Navbar = () => {
               }}
             >
               <div
-                className="p-[13px] cursor-pointer"
+                className="h-[44px] px-3 cursor-pointer ml-3"
                 onClick={() => setOpenCart(!openCart)}
               >
-                <img src={bagImg} alt="bag" width={16} height={16} />
+                <img
+                  src={bagImg}
+                  alt="bag"
+                  width={15}
+                  height={15}
+                  className="h-full"
+                />
               </div>
 
               <div
@@ -209,20 +222,19 @@ const Navbar = () => {
                 </div>
                 <div className="w-full max-w-[1024px] pt-10 pb-20 lg:px-5 flex items-start flex-row gap-20 px-12 lg:h-full h-screen">
                   <div className="w-full">
-                    <div className="flex flex-col items-start gap-4">
+                    <div className="flex flex-col items-start">
                       <h2 className="text-2xl font-semibold">
                         Your Bag is empty.
                       </h2>
-                      <div>
-                        <a href="" className="text-blue underline lg:text-xs">
+                      <div className="my-8">
+                        <a href="" className="text-blue underline lg:text-xs ">
                           Sign in
                         </a>{" "}
                         to see if you have any saved items
                       </div>
                     </div>
-                    <ul className="pt-6 flex gap-2 flex-col">
-                      <h3 className="lg:text-xs text-gray mb-2">My Profile</h3>
-
+                    <h3 className="lg:text-xs text-gray mb-3">My Profile</h3>
+                    <ul className="flex gap-2 flex-col">
                       <li>
                         <a
                           href=""
@@ -287,10 +299,16 @@ const Navbar = () => {
               }}
             >
               <div
-                className="p-[13px] -mr-[13px] cursor-pointer lg:hidden"
+                className="px-3 h-[44px] cursor-pointer lg:hidden ml-3"
                 onClick={() => setOpenSubNav(!openSubNav)}
               >
-                <img src={bars2Icon} width={17} height={17} alt="bars" />
+                <img
+                  src={bars2Icon}
+                  width={19}
+                  height={19}
+                  alt="bars"
+                  className="h-full"
+                />
               </div>
               {/* NavBar Mobile */}
               <div
@@ -352,9 +370,9 @@ const Navbar = () => {
                               />
                             </div>
                             <div className="w-full pt-10 pb-20 flex items-start flex-row gap-20 px-12 h-full">
-                              <div className="pt-6 flex gap-3 flex-col">
+                              <div className="pt-6 flex gap-10 flex-col">
                                 {nav.subLinks.map((subLink, i) => (
-                                  <div key={i} className="flex flex-col gap-2">
+                                  <div key={i} className="flex flex-col gap-3">
                                     <h2 className="text-gray mb-2">
                                       {subLink.head}
                                     </h2>
@@ -415,12 +433,12 @@ const Navbar = () => {
       >
         <nav className="flex justify-between items-center max-w-[1024px] w-full h-full mx-auto lg:px-5 px-4">
           <div>
-            <a href="" className="text-xl">
+            <a href="" className="text-xl font-semibold">
               iPhone 16 Pro
             </a>
           </div>
-          <div className="flex items-center gap-4">
-            <ul className="items-center gap-4 lg:flex hidden">
+          <div className="flex items-center gap-6">
+            <ul className="items-center gap-6 lg:flex hidden">
               {nav2Lists.map((nav, i) => (
                 <li key={i}>
                   <a
@@ -442,10 +460,16 @@ const Navbar = () => {
               }}
             >
               <div
-                className="p-4 -mr-4"
+                className="h-[51px] px-4 -mr-6"
                 onClick={() => setOpenSubLink(!openSubLink)}
               >
-                <img src={chevronDownIcon} width={19} height={19} alt="" />
+                <img
+                  src={chevronDownIcon}
+                  width={19}
+                  height={19}
+                  alt=""
+                  className="h-full"
+                />
               </div>
               <div
                 className={`absolute z-[999] top-full left-0 right-0 bg-zinc w-full animate-[fadeAnimation_500ms_ease-in-out] ${

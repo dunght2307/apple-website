@@ -42,7 +42,7 @@ const Hero = () => {
 
   return (
     <section className="w-full xl:h-[120vh] lg:h-[110vh] h-[100vh] relative overflow-hidden">
-      <div className="w-full h-full flex items-center justify-between flex-col gap-8 absolute z-[2] top-0 xl:py-40 lg:py-36 py-40 pb-10">
+      <div className="w-full h-full flex items-center justify-between flex-col gap-8 absolute z-[2] top-0 pt-40 lg:pb-40 md:pb-32 pb-24">
         <div
           id="hero"
           className="flex flex-col items-center xl:gap-8 opacity-0 scale-110"
@@ -54,31 +54,32 @@ const Hero = () => {
         </div>
         <div
           id="cta"
-          className="p-4 flex flex-col items-center opacity-0 translate-y-20"
+          className="lg:pb-10 flex flex-col items-center opacity-0 translate-y-20"
         >
           <a href="#hightlights" className="btn">
             Buy
           </a>
           <p className="lg:text-lg font-semibold text-gray">
             From $999 or $41.62/mo. for 24 mo.{" "}
-            <a href="" className="font-feature-settings">
+            <a href="#footnote-2" className="font-feature-settings">
               1
             </a>
           </p>
           <p className="lg:text-lg font-normal text-gray relative">
             Apple Intelligence coming this fall{" "}
-            <a href="" className="font-feature-settings">
+            <a href="#footnote-3" className="font-feature-settings">
               2
             </a>
           </p>
         </div>
       </div>
-      <div className="w-screen absolute z-[1] top-0 max-sm:top-[136px] left-0 flex-center">
+      <div className="w-screen absolute z-[1] top-0 max-sm:top-[100px] left-0 flex-center">
         <video
-          className="pointer-events-none max-w-[130%] sm:max-w-[145%] lg:max-w-[110%] xl:max-w-full"
-          autoPlay
+          className="pointer-events-none max-w-[115%] sm:max-w-[140%] lg:max-w-[110%] xl:max-w-full"
+          preload="none"
           muted
-          playsInline={true}
+          autoPlay
+          playsInline
           key={videoSrc}
         >
           <source src={videoSrc} type="video/mp4" />

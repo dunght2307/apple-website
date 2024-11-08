@@ -51,7 +51,7 @@ const AppleIntelligence = () => {
     });
   }, []);
   return (
-    <section className="section">
+    <section className="section-pt">
       <div className="flex-center flex-col ">
         <div className="h-full w-full flex-center overflow-hidden">
           <video
@@ -96,11 +96,11 @@ const AppleIntelligence = () => {
           />
         </div>
       </div>
-      <div className="black-bg-gradient pb-40">
+      <div className="black-bg-gradient pb-20 lg:pb-40">
         <div className="viewport-content">
           <div className="screen-max-width">
             <div className="flex-center">
-              <p className="max-w-full lg:max-w-2xl text-center text-gray text-lg lg:text-xl font-semibold leading-snug mt-28">
+              <p className="lg:w-[60%] w-full text-content text-center lg:mt-28 mt-14">
                 iPhone 16 Pro is built for Apple Intelligence, the personal
                 intelligence system that helps you{" "}
                 <span className="text-white">
@@ -110,14 +110,14 @@ const AppleIntelligence = () => {
                 mind that no one else can access your data — not even Apple.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center mt-36 gap-8">
+            <div className="flex flex-col items-center justify-center lg:mt-36 mt-16 gap-8">
               <ul className="lg:flex flex-row gap-6 hidden">
                 {appleIntelligenceGallery.map((item, index) => (
                   <li
                     key={index}
                     className={`block text-lg text-gray font-semibold py-4 px-8 border-b-[1px] border-[#424245] cursor-pointer ${
                       item.title === current
-                        ? "border-b-[1px] border-[#fff]"
+                        ? "border-b-[1px] border-[#fff] text-white"
                         : "border-b-[1px] border-[#424245]"
                     }`}
                     onClick={() => setCurrent(item.title)}
@@ -141,7 +141,7 @@ const AppleIntelligence = () => {
                     </div>
                     <div className="min-h-[60px]">
                       <h4
-                        className={`text-lg lg:text-xl font-semibold ${
+                        className={`text-center text-lg lg:text-xl font-semibold ${
                           current === gallery.title
                             ? "block animate-[fadeAnimation_400ms_ease-in-out]"
                             : "lg:hidden"
@@ -188,7 +188,7 @@ const AppleIntelligence = () => {
                         </div>
                       </div>
 
-                      <div className="flex-1 flex flex-col gap-8">
+                      <div className="flex-1 flex flex-col gap-6">
                         <div className="flex-center flex-col bg-black rounded-3xl flex-1 relative z-[1] overflow-hidden">
                           <div className="lg:mt-10 mt-6 wlg:w-[65%] w-[85%]">
                             <p className="text-gray text-sm text-center">
@@ -232,43 +232,42 @@ const AppleIntelligence = () => {
                 ))}
               </div>
             </div>
-          </div>
-
-          <div className="flex-center flex-col mt-8">
-            <div className="flex-center flex-col gap-10 lg:max-w-[50%] max-w-full">
-              <img src={iconPrivacyImg} alt="" />
-              <h3 className="lg:text-6xl sm:text-5xl text-4xl font-semibold text-center">
-                Great powers come with great privacy.
-              </h3>
-            </div>
-            <div className="max-w-2xl w-full flex justify-center items-start flex-col md:flex-row lg:my-10 my-16 lg:gap-10 gap-6">
-              <div className="flex-1 flex-center w-full">
-                <p className="text-gray text-lg font-semibold">
-                  Apple Intelligence is designed to{" "}
-                  <span className="text-white">
-                    protect your privacy at every step
-                  </span>
-                  . It’s integrated into the core of iPhone through on-device
-                  processing. So it’s aware of your personal information without
-                  collecting your personal information.
-                </p>
+            <div className="flex-center flex-col lg:mt-8 mt-20">
+              <div className="flex-center flex-col gap-10 lg:max-w-[50%] max-w-full">
+                <img src={iconPrivacyImg} alt="" />
+                <h3 className="lg:text-6xl sm:text-5xl text-4xl font-semibold text-center">
+                  Great powers come with great privacy.
+                </h3>
               </div>
-              <div className="flex-1 flex-center w-full">
-                <p className="text-gray text-lg font-semibold">
-                  And with
-                  <span className="text-white">
-                    groundbreaking Private Cloud Compute
-                  </span>{" "}
-                  , Apple Intelligence can draw on larger Apple-designed
-                  server-based models, running on Apple silicon, to handle more
-                  complex requests for you while protecting your privacy.
-                </p>
+              <div className="lg:w-[65%] w-full flex justify-center items-start flex-col md:flex-row lg:my-10 my-6 lg:gap-10 gap-6">
+                <div className="flex-1">
+                  <p className="text-content">
+                    Apple Intelligence is designed to{" "}
+                    <span className="text-white">
+                      protect your privacy at every step
+                    </span>
+                    . It’s integrated into the core of iPhone through on-device
+                    processing. So it’s aware of your personal information
+                    without collecting your personal information.
+                  </p>
+                </div>
+                <div className="flex-1">
+                  <p className="text-content">
+                    And with
+                    <span className="text-white">
+                      groundbreaking Private Cloud Compute
+                    </span>{" "}
+                    , Apple Intelligence can draw on larger Apple-designed
+                    server-based models, running on Apple silicon, to handle
+                    more complex requests for you while protecting your privacy.
+                  </p>
+                </div>
               </div>
+              <a className="link lg:mt-16 mt-12">
+                Learn more about Apple Intelligence
+                <img src={rightImg} alt="watch" className="ml-2" />
+              </a>
             </div>
-            <a className="text-blue transition-all hover:underline flex items-center mt-16 text-lg font-semibold">
-              Learn more about Apple Intelligence
-              <img src={rightImg} alt="watch" className="ml-2" />
-            </a>
           </div>
         </div>
       </div>

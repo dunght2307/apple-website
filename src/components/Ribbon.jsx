@@ -6,7 +6,7 @@ const Ribbon = () => {
   useGSAP(() => {
     gsap.to("#ribbon", {
       opacity: 1,
-      delay: 3,
+      delay: 2,
       scale: 1,
       duration: 1,
     });
@@ -14,13 +14,13 @@ const Ribbon = () => {
   return (
     <div
       id="ribbon"
-      className="w-full py-4 px-4 md:px-5 bg-zinc absolute top-[44px] left-0 z-[3] opacity-0 scale-110"
+      className="w-full py-4 bg-zinc absolute top-[44px] left-0 z-[3] opacity-0 scale-110"
     >
       <div className="text-white text-center text-sm viewport-content">
-        <p className="inline-block mr-3">
+        <p className="inline-block w-[83.33%]">
           Get $180–$650 in credit toward iPhone 16 or iPhone 16 Pro when you
           trade in iPhone 12 or higher.{" "}
-          <a href="" className="font-feature-settings">
+          <a href="#footnote-1" className="font-feature-settings">
             *
           </a>{" "}
           <span>

@@ -3,43 +3,68 @@ import {
   allColorsImg,
   aNewEraForSiriImg,
   aNewEraForSiriVideo,
+  app2StackIcon,
+  appleHapticsIcon,
+  appleIntelligenceIcon,
+  applePasswordsIcons,
   blackImg,
   blackTitaniumImg,
   blueImg,
   boostYourProductivityImg,
   boostYourProductivityVideo,
+  cameraControlImage1,
+  cameraControlImage2,
+  cameraControlImage3,
+  cameraControlImage4,
+  cameraControlVideo1,
+  cameraControlVideo2,
+  cameraControlVideo3,
+  cameraControlVideo4,
   cameraIcon,
   carrierIcon,
   chevronRightIcon,
   cleanUpImg,
+  controlCenterImg,
   deliveryIcon,
   desertTitaniumImg,
+  earthIcon,
+  expressiveTextImg,
   expressYourselfVisuallyImg,
+  eyeIcon,
   featureItem1Img,
   featureItem2Img,
   featureItem3Img,
   featureItem4Img,
+  fiberIcon,
   flashLightIcon,
   focusIcon,
+  Fusion24mmImg,
+  Fusion28mmImg,
+  Fusion35mmImg,
   highlightFirstVideo,
   highlightFivethVideo,
   highlightFourthVideo,
   highlightSecondVideo,
   highlightSixthVideo,
   highlightThirdVideo,
+  homeScreenImg,
   instructionsImg,
   iphoneAirPodsImg,
   iphoneApplewatchImg,
   iphoneMacImg,
   languageImg,
+  macroImg,
   magnifierIcon,
   messagesImg,
   naturalTitaniumImg,
   payIcon,
   personalIcon,
+  personCropCircleIcon,
+  photosAppImg,
   playgroundAppImg,
   plusIcon,
   recordImg,
+  recycleIcon,
   saveIcon,
   screenAccessibilityImg,
   screenCameraImg,
@@ -54,7 +79,10 @@ import {
   shortcutIcon,
   silentModeIcon,
   specialistIcon,
+  Telephoto120mmImg,
+  Telephoto48mmImg,
   translateIcon,
+  ultraWideImg,
   voiceMemoIcon,
   whiteImg,
   whiteTitaniumImg,
@@ -680,18 +708,18 @@ export const actionButtonList = [
   },
 ];
 
-export const SignificantOthers = [
+export const SignificantOthersList = [
   {
     id: 1,
-    title: "iPhone and Apple Watch",
-    desc: "Misplaced your iPhone? The latest Apple Watch models can show you its approximate distance and direction.21 To set up a group photo on your iPhone, join the group and use Apple Watch as a viewfinder to snap the shot. And when you take a call on your Apple Watch, just tap your iPhone to continue the conversation there.",
-    img: iphoneApplewatchImg,
+    title: "iPhone and Mac",
+    desc: "Misplaced your iPhone? The latest Apple Watch models can show you its approximate distance and direction.16 To set up a group photo on your iPhone, join the group and use Apple Watch as a viewfinder to snap the shot. And when you take a call on your Apple Watch, just tap your iPhone to continue the conversation there.",
+    img: iphoneMacImg,
   },
   {
     id: 2,
-    title: "iPhone and Mac",
-    desc: "You can answer calls or messages from your iPhone directly on your Mac. Copy images, video, or text from your iPhone, then paste into another app on your nearby Mac. And with iCloud, you can access your favorite files from either your iPhone or Mac.",
-    img: iphoneMacImg,
+    title: "iPhone and Apple Watch",
+    desc: "With iPhone Mirroring, you can view your iPhone screen on your Mac and control it without picking up your phone. Continuity features also let you answer calls or messages right from your Mac. You can even copy images, video, or text from your iPhone and paste it all into a different app on your Mac. And with iCloud, you can access your files from either device.",
+    img: iphoneApplewatchImg,
   },
   {
     id: 3,
@@ -701,7 +729,7 @@ export const SignificantOthers = [
   },
 ];
 
-export const WaysToShopList = [
+export const IncentiveBackgroundAltList = [
   {
     id: 1,
     icon: saveIcon,
@@ -786,125 +814,130 @@ export const footerLinks = [
 
 export const footerNav = [
   {
-    id: 1,
     column: 1,
-    header: "Shop and Learn",
     items: [
-      "Store",
-      "Mac",
-      "iPad",
-      "iPhone",
-      "Watch",
-      "Vision",
-      "AirPods",
-      "TV & Home",
-      "AirTag",
-      "Accessories",
-      "Gift Cards",
+      {
+        header: "Shop and Learn",
+        subItems: [
+          "Store",
+          "Mac",
+          "iPad",
+          "iPhone",
+          "Watch",
+          "Vision",
+          "AirPods",
+          "TV & Home",
+          "AirTag",
+          "Accessories",
+          "Gift Cards",
+        ],
+      },
+      {
+        header: "Apple Wallet",
+        subItems: ["Wallet", "Apple Card", "Apple Pay", "Apple Cash"],
+      },
     ],
   },
   {
-    id: 2,
-    column: 1,
-    header: "Apple Wallet",
-    items: ["Wallet", "Apple Card", "Apple Pay", "Apple Cash"],
-  },
-  {
-    id: 3,
     column: 2,
-    header: "Account",
-    items: ["Manage Your Apple ID", "Apple Store Account", "iCloud.com"],
-  },
-  {
-    id: 4,
-    column: 2,
-    header: "Entertainment",
     items: [
-      "Apple One",
-      "Apple TV+",
-      "Apple Music",
-      "Apple Arcade",
-      "Apple Fitness+",
-      "Apple News+",
-      "Apple Podcasts",
-      "Apple Books",
-      "App Store",
+      {
+        header: "Account",
+        subItems: ["Manage Your Apple ID", "Apple Store Account", "iCloud.com"],
+      },
+      {
+        header: "Entertainment",
+        subItems: [
+          "Apple One",
+          "Apple TV+",
+          "Apple Music",
+          "Apple Arcade",
+          "Apple Fitness+",
+          "Apple News+",
+          "Apple Podcasts",
+          "Apple Books",
+          "App Store",
+        ],
+      },
     ],
   },
+
   {
-    id: 5,
     column: 3,
-    header: "Apple Store",
     items: [
-      "Find a Store",
-      "Genius Bar",
-      "Today at Apple",
-      "Group Reservations",
-      "Apple Camp",
-      "Apple Store App",
-      "Certified Refurbished",
-      "Apple Trade In",
-      "Financing",
-      "Carrier Deals at Apple",
-      "Order Status",
-      "Shopping Help",
+      {
+        header: "Apple Store",
+        subItems: [
+          "Find a Store",
+          "Genius Bar",
+          "Today at Apple",
+          "Group Reservations",
+          "Apple Camp",
+          "Apple Store App",
+          "Certified Refurbished",
+          "Apple Trade In",
+          "Financing",
+          "Carrier Deals at Apple",
+          "Order Status",
+          "Shopping Help",
+        ],
+      },
     ],
   },
   {
-    id: 6,
     column: 4,
-    header: "For Business",
-    items: ["Apple and Business", "Shop for Business"],
-  },
-  {
-    id: 7,
-    column: 4,
-    header: "For Education",
-    items: ["Apple and Education", "Shop for K-12", "Shop for College"],
-  },
-  {
-    id: 8,
-    column: 4,
-    header: "For Healthcare",
     items: [
-      "Apple in Healthcare",
-      "Mac in Healthcare",
-      "Health on Apple Watch",
-      "Health Records on iPhone and iPad",
+      {
+        header: "For Business",
+        subItems: ["Apple and Business", "Shop for Business"],
+      },
+      {
+        header: "For Education",
+        subItems: ["Apple and Education", "Shop for K-12", "Shop for College"],
+      },
+      {
+        header: "For Healthcare",
+        subItems: [
+          "Apple in Healthcare",
+          "Mac in Healthcare",
+          "Health on Apple Watch",
+          "Health Records on iPhone and iPad",
+        ],
+      },
+      {
+        header: "For Government",
+        subItems: ["Shop for Government", "Shop for Veterans and Military"],
+      },
     ],
-  },
-  {
-    id: 9,
-    column: 4,
-    header: "For Government",
-    items: ["Shop for Government", "Shop for Veterans and Military"],
   },
   {
     id: 10,
     column: 5,
-    header: "Apple Values",
     items: [
-      "Accessibility",
-      "Education",
-      "Environment",
-      "Inclusion and Diversity",
-      "Privacy",
-      "Racial Equity and Justice",
-      "Supply Chain",
-    ],
-  },
-  {
-    id: 11,
-    column: 5,
-    header: "About Apple",
-    items: [
-      "Newsroom",
-      "Apple Leadership",
-      "Career Opportunities",
-      "Investors",
-      "Ethics & Compliance",
-      "Events",
-      "Contact Apple",
+      {
+        header: "Apple Values",
+        subItems: [
+          "Accessibility",
+          "Education",
+          "Environment",
+          "Inclusion and Diversity",
+          "Privacy",
+          "Racial Equity and Justice",
+          "Supply Chain",
+        ],
+      },
+      {
+        header: "About Apple",
+        subItems: [
+          "Newsroom",
+          "Apple Leadership",
+          "Career Opportunities",
+          "Investors",
+          "Ethics & Compliance",
+          "Events",
+          "Contact Apple",
+        ],
+      },
     ],
   },
 ];
@@ -1000,5 +1033,261 @@ export const appleIntelligenceGallery = [
         "in a snap.",
       ],
     },
+  },
+];
+
+export const CameraControlList = [
+  {
+    id: 1,
+    img: cameraControlImage1,
+    video: cameraControlVideo1,
+    title: [
+      "Click to launch the Camera app. Click again to",
+      " instantly take a photo.",
+    ],
+  },
+  {
+    id: 2,
+    img: cameraControlImage2,
+    video: cameraControlVideo2,
+
+    title: ["Click and hold to", " start recording video."],
+  },
+  {
+    id: 3,
+    img: cameraControlImage3,
+    video: cameraControlVideo3,
+
+    title: ["A light press", " opens controls like zoom."],
+  },
+  {
+    id: 4,
+    img: cameraControlImage4,
+    video: cameraControlVideo4,
+
+    title: [
+      "With a double light press, you can",
+      " select another camera setting. ",
+      "Then slide to adjust that setting.",
+    ],
+  },
+];
+
+export const ZommGalleryList = [
+  {
+    id: 1,
+    img: macroImg,
+    title: "Marco",
+    des: ["0.5x", "Macro"],
+  },
+  {
+    id: 2,
+    img: ultraWideImg,
+    title: "13 mm",
+    des: ["0.5x", "Ultra Wide"],
+  },
+  {
+    id: 3,
+    img: Fusion24mmImg,
+    title: "24 mm",
+    des: ["1x", "Fusion 24 mm"],
+  },
+  {
+    id: 4,
+    img: Fusion28mmImg,
+    title: "28 mm",
+    des: ["1.2x", "Fusion 28 mm"],
+  },
+  {
+    id: 5,
+    img: Fusion35mmImg,
+    title: "35 mm",
+    des: ["1.5x", "Fusion 35 mm"],
+  },
+  {
+    id: 6,
+    img: Telephoto48mmImg,
+    title: "48 mm",
+    des: ["2x", "Fusion 48 mm"],
+  },
+  {
+    id: 7,
+    img: Telephoto120mmImg,
+    title: "120 mm",
+    des: ["5x", "Fusion 120 mm"],
+  },
+];
+
+export const chips = [
+  {
+    device: "iPhone 12 Pro",
+    cpu: ["60% faster", "2x faster"],
+    battery: ["10 more hours", "16 more hours"],
+  },
+  {
+    device: "iPhone 12 Pro Max",
+    cpu: ["60% faster", "2x faster"],
+    battery: ["7 more hours", "13 more hours"],
+  },
+  {
+    device: "iPhone 13 Pro",
+    cpu: ["40% faster", "50% faster"],
+    battery: ["5 more hours", "11 more hours"],
+  },
+  {
+    device: "iPhone 13 Pro Max",
+    cpu: ["40% faster", "50% faster"],
+    battery: ["1 less hours", "5 more hours"],
+  },
+  {
+    device: "iPhone 14 Pro",
+    cpu: ["30% faster", "40% faster"],
+    battery: ["4 more hours", "10 more hours"],
+  },
+  {
+    device: "iPhone 14 Pro Max",
+    cpu: ["30% faster", "40% faster"],
+    battery: ["2 less hours", "4 more hours"],
+  },
+  {
+    device: "iPhone 15 Pro",
+    cpu: ["15% faster", "20% faster"],
+    battery: ["4 more hours", "10 more hours"],
+  },
+  {
+    device: "iPhone 15 Pro Max",
+    cpu: ["15% faster", "20% faster"],
+    battery: ["2 less hours", "4 more hours"],
+  },
+];
+
+export const iosList = [
+  {
+    id: 1,
+    img: homeScreenImg,
+    title: [
+      "Personalize your Home Screen.",
+      "Tint your icons with any color. Rearrange and resize apps and widgets. You can even lock or hide apps to protect sensitive information — it’s your call.",
+    ],
+  },
+  {
+    id: 2,
+    img: controlCenterImg,
+    title: [
+      "Choose your controls.",
+      "Swap out your Lock Screen controls for ones you love to use more often. Or you can assign a control to the Action button.",
+    ],
+  },
+  {
+    id: 3,
+    img: photosAppImg,
+    title: [
+      "Find your favorite shots faster.",
+      " In the redesigned Photos app, your Collections are automatically organized by topic, like People & Pets.",
+    ],
+  },
+  {
+    id: 4,
+    img: expressiveTextImg,
+    title: [
+      "Get expressive with text.",
+      " Add playful, animated effects to any word, phrase, or emoji in iMessage — many of which are automatically suggested as you type.",
+    ],
+  },
+];
+
+export const valuesList = [
+  {
+    id: 1,
+    title: "Environment",
+    items: [
+      {
+        icon: earthIcon,
+        text: [
+          "All Apple data centers — including those that power Apple Intelligence — run on",
+          "100% renewable electricity.",
+          "",
+        ],
+      },
+      {
+        icon: recycleIcon,
+        text: [
+          "",
+          "iPhone 16 Pro uses more recycled metals than ever:",
+          " over 95% recycled lithium in the battery. 100% recycled gold in the plating of the USB-C connector and camera wires. 100% recycled copper foil in the MagSafe inductive charger.",
+        ],
+      },
+      {
+        icon: fiberIcon,
+        text: [
+          "The packaging for iPhone 16 Pro is",
+          " 100% fiber based",
+          "for the first time.14 And it’s thinner, which reduces the carbon impact for shipping.",
+        ],
+      },
+    ],
+    link: "Learn about Apple and the environment",
+  },
+  {
+    id: 2,
+    title: "Privacy",
+    items: [
+      {
+        icon: appleIntelligenceIcon,
+        text: [
+          "",
+          "Apple Intelligence protects your privacy",
+          "at every step. With on-device processing and Private Cloud Compute, no one but you can access your data — not even Apple.",
+        ],
+      },
+      {
+        icon: applePasswordsIcons,
+        text: [
+          "",
+          "The new Passwords app",
+          "makes it even easier to access account passwords, passkeys, Wi-Fi passwords, two-factor authentication codes, and more. It stores them securely and syncs across your devices with end-to-end encryption.",
+        ],
+      },
+      {
+        icon: personCropCircleIcon,
+        text: [
+          "You can also",
+          " control which contacts to share with an app",
+          "rather than giving it access to all your contacts. And you can choose to share more contacts over time.",
+        ],
+      },
+    ],
+    link: "Learn about Apple and privacy",
+  },
+  {
+    id: 3,
+    title: "Accessibility",
+    items: [
+      {
+        icon: eyeIcon,
+        text: [
+          "",
+          "Eye Tracking",
+          "makes it possible to navigate your iPhone and use your favorite apps just by moving your eyes, thanks to the power of machine learning and the front-facing camera.",
+        ],
+      },
+      {
+        icon: appleHapticsIcon,
+        text: [
+          "",
+          "Music Haptics",
+          "matches the iPhone Taptic Engine with the rhythm of songs. So people who are deaf or hard of hearing can enjoy the Apple Music catalog in a whole new way.",
+        ],
+      },
+      {
+        icon: app2StackIcon,
+        text: [
+          "",
+          "Vocal Shortcuts ",
+          "helps people with severe atypical speech record sounds that trigger specific actions on iPhone — set a timer, take a screenshot, scroll up and down, and more.",
+        ],
+      },
+    ],
+    link: "Learn about Apple and accessibility",
   },
 ];

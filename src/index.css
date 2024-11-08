@@ -17,7 +17,7 @@ body {
   line-height: normal;
   background: #000;
   border-color: #3b3b3b;
-  user-select: none;
+  /* user-select: none; */
 }
 
 canvas {
@@ -44,6 +44,29 @@ canvas {
   background: linear-gradient(180deg, rgb(0, 0, 0) 0%, #131313 50%);
 }
 
+.black-bg-gradient-1 {
+  background-image: linear-gradient(
+    180deg,
+    #0e0e0e 30%,
+    rgba(14, 14, 14, 0) 80%
+  );
+}
+
+.black-bg-gradient-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0) 60%,
+    rgb(19, 19, 19) 80%
+  );
+}
+
+.shadow {
+  background-image: linear-gradient(0deg, rgb(255, 255, 255), #757575);
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
 @layer utilities {
   .screen-max-width {
     @apply w-full max-w-[1024px] mx-auto my-0;
@@ -54,7 +77,7 @@ canvas {
   }
 
   .btn {
-    @apply px-4 py-2 rounded-3xl bg-blue my-5 lg:text-lg opacity-90 hover:opacity-100;
+    @apply px-4 py-3 rounded-3xl bg-blue mb-5 lg:text-lg opacity-90 hover:opacity-100;
   }
 
   .color-container {
@@ -74,27 +97,34 @@ canvas {
   }
 
   .section {
-    @apply lg:pt-40 pt-20;
+    @apply lg:py-40 py-20 overflow-hidden;
+  }
+
+  .section-pt {
+    @apply lg:pt-40 pt-20 overflow-hidden;
+  }
+
+  .section-pb {
+    @apply lg:pb-40 pb-20 overflow-hidden;
   }
 
   .section-heading {
-    @apply text-white lg:text-7xl md:text-5xl text-3xl lg:mb-0 mb-5 font-semibold opacity-0 translate-y-20;
+    @apply text-white lg:text-7xl md:text-6xl text-3xl font-semibold leading-none opacity-0 translate-y-20;
   }
 
   .section-heading-2 {
-    @apply lg:text-9xl sm:text-7xl text-5xl text-orange-100 lg:mb-0 mb-5 font-semibold opacity-0 translate-y-20;
+    @apply lg:text-9xl sm:text-8xl text-5xl font-semibold leading-none;
   }
 
   .section-heading-3 {
-    @apply lg:text-5xl sm:text-5xl text-4xl lg:mb-0 mb-5 font-semibold opacity-0 translate-y-20;
+    @apply lg:text-8xl sm:text-5xl text-4xl font-semibold leading-none;
   }
 
-  .feature-text {
-    @apply text-gray lg:max-w-md max-w-64 text-lg lg:text-xl font-semibold leading-snug;
+  .text-container {
+    @apply w-full flex justify-center items-start flex-col md:flex-row lg:my-28 sm:my-20 my-16 gap-16 lg:gap-32;
   }
-
-  .feature-text-container {
-    @apply w-full flex justify-center items-start flex-col md:flex-row lg:my-28 sm:my-20 my-16 gap-5;
+  .text-content {
+    @apply text-gray text-lg lg:text-xl font-semibold leading-snug;
   }
 
   .feature-video {
@@ -106,7 +136,7 @@ canvas {
   }
 
   .link {
-    @apply text-blue hover:underline cursor-pointer flex items-center text-sm lg:text-lg opacity-0 translate-y-20;
+    @apply text-blue hover:underline cursor-pointer flex items-center text-sm lg:text-lg font-semibold transition-all;
   }
 
   .control-btn {

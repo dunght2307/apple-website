@@ -20,7 +20,12 @@ export default {
       },
       colors: {
         blue: "#0071e3",
-        white: "#f5f5f7",
+        white: {
+          DEFAULT: "#f5f5f7",
+          100: "#ffffffcc",
+          200: "#ffffff8f",
+          300: "#ffffff3d",
+        },
         gray: {
           DEFAULT: "#86868b",
           100: "#94928d",
@@ -31,7 +36,7 @@ export default {
           DEFAULT: "#b38a6e",
           100: "#c8c2bd",
         },
-        zinc: "#101010",
+        zinc: "#1d1d1f",
       },
       keyframes: {
         fadeAnimation: {

@@ -22,9 +22,8 @@ const VideoCarousel = () => {
     isPlaying: false,
   });
 
-  const [loadedData, setLoadedData] = useState([]);
-
   const { videoId, startPlay, isEnd, isLastVideo, isPlaying } = video;
+  const [loadedData, setLoadedData] = useState([]);
 
   useGSAP(() => {
     // Slider animation to move the video out of the screen and bring the next video in
@@ -196,9 +195,12 @@ const VideoCarousel = () => {
                   <source src={list.video} type="video/mp4" />
                 </video>
               </div>
-              <div className="absolute top-0 left-0 lg:m-12 m-5 z-10 lg:w-[50%]">
+              <div className="absolute top-0 left-0 lg:m-12 m-5 z-10 lg:w-[40%]">
                 {list.textLists.map((text) => (
-                  <p key={text} className="lg:text-3xl font-semibold">
+                  <p
+                    key={text}
+                    className="text-lg sm:text-2xl lg:text-3xl font-semibold text-white"
+                  >
                     {text}
                   </p>
                 ))}
@@ -228,15 +230,15 @@ const VideoCarousel = () => {
               key={i}
               ref={(el) => (videoDivRef.current[i] = el)}
               className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
-              onClick={() =>
-                setVideo({
-                  videoId: i,
-                  startPlay: false,
-                  isEnd: false,
-                  isLastVideo: false,
-                  isPlaying: false,
-                })
-              }
+              // onClick={() =>
+              //   setVideo({
+              //     videoId: i,
+              //     startPlay: false,
+              //     isEnd: false,
+              //     isLastVideo: false,
+              //     isPlaying: false,
+              //   })
+              // }
             >
               <span
                 className="absolute h-full w-full rounded-full"

@@ -42,7 +42,7 @@ const ModelView = ({
       >
         <Suspense fallback={<Loader />}>
           <Iphone
-            scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
+            scale={index === 1 ? [17, 17, 17] : [18, 18, 18]}
             item={item}
             size={size}
           />
