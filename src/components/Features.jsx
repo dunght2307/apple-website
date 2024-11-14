@@ -20,8 +20,8 @@ const Features = () => {
     gsap.to("#exploreVideo", {
       scrollTrigger: {
         trigger: "#exploreVideo",
-        toggleActions: "play reverse restart restart",
-        start: "-10% 85%",
+        toggleActions: "restart reverse restart reverse",
+        start: "top 80%",
       },
       onComplete: () => {
         videoRef.current.play();
@@ -96,53 +96,59 @@ const Features = () => {
       </div>
       <div className="bg-gradient">
         <div className="viewport-content">
-          <div className="screen-max-width text-container">
-            <div className="flex-1">
-              <p className="text-content">
-                iPhone 16 Pro features a Grade 5 titanium design with a new,
-                refined microblasted finish. Titanium has one of the highest
-                strength-to-weight ratios of any metal, making these models{" "}
-                <span className="text-white">
-                  incredibly strong and impressively light.
-                </span>{" "}
-                iPhone 16 Pro comes in four stunning colors — including new
-                Desert Titanium.
-              </p>
-            </div>
-            <div className="flex-1">
-              <p className="text-content">
-                Internal design improvements — including a 100 percent recycled
-                aluminum thermal substructure and back glass optimizations that
-                further dissipate heat — enable up to 20 percent{" "}
-                <span className="text-white">better sustained performance</span>{" "}
-                than iPhone 15 Pro. So you can do all the things you love — like
-                high-intensity gaming — for longer.
-              </p>
+          <div className="screen-max-width">
+            <div className="text-container">
+              <div className="flex-1">
+                <p className="text-content">
+                  iPhone 16 Pro features a Grade 5 titanium design with a new,
+                  refined microblasted finish. Titanium has one of the highest
+                  strength-to-weight ratios of any metal, making these models{" "}
+                  <span className="text-white">
+                    incredibly strong and impressively light.
+                  </span>{" "}
+                  iPhone 16 Pro comes in four stunning colors — including new
+                  Desert Titanium.
+                </p>
+              </div>
+              <div className="flex-1">
+                <p className="text-content">
+                  Internal design improvements — including a 100 percent
+                  recycled aluminum thermal substructure and back glass
+                  optimizations that further dissipate heat — enable up to 20
+                  percent{" "}
+                  <span className="text-white">
+                    better sustained performance
+                  </span>{" "}
+                  than iPhone 15 Pro. So you can do all the things you love —
+                  like high-intensity gaming — for longer.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="relative">
-          <ul
-            className="flex gap-6 scroll-smooth overflow-x-auto 
+
+        <ul
+          className="flex gap-6 scroll-smooth overflow-x-auto 
             snap-x snap-mandatory no-scrollbar px-[14%]
           "
-            ref={scrollContainerRef}
-          >
-            {FeatureList.map((item, index) => (
-              <li
-                key={index}
-                className="w-[280px] sm:w-[450px] lg:w-[550px] snap-center cursor-pointer shrink-0"
-                ref={scrollItemRef}
-              >
-                <img src={item.img} alt="" className="w-full rounded-3xl" />
+          ref={scrollContainerRef}
+        >
+          {FeatureList.map((item, index) => (
+            <li
+              key={index}
+              className="w-[280px] sm:w-[450px] lg:w-[550px] snap-center cursor-pointer shrink-0"
+              ref={scrollItemRef}
+            >
+              <img src={item.img} alt="" className="w-full rounded-3xl" />
 
-                <p className="p-5 sm:py-8 sm:px-5 text-orange text-lg">
-                  {item.title}
-                </p>
-              </li>
-            ))}
-          </ul>
-          <div className="viewport-content flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
+              <p className="p-5 sm:p-8 text-orange-200 text-lg font-semibold">
+                {item.title}
+              </p>
+            </li>
+          ))}
+        </ul>
+        <div className="viewport-content">
+          <div className="flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
             <button
               onClick={() => prev()}
               disabled={current === 1}
@@ -164,27 +170,32 @@ const Features = () => {
               <img src={nextImg} alt="next" className="max-w-[36px] h-[36px]" />
             </button>
           </div>
-        </div>
-        <div className="viewport-content">
-          <div className="screen-max-width text-container">
-            <div className="flex-1">
-              <p className="text-content">
-                New display technology allows us to route display data under
-                active pixels with no distortion, resulting in thinner borders
-                for larger 6.3-inch and 6.9-inch{" "}
-                <span className="text-white">Super Retina XDR displays</span>{" "}
-                that feel great in the hand.
-              </p>
-            </div>
-            <div className="flex-1">
-              <p className="text-content">
-                iPhone 16 Pro is splash, water, and dust resistant.4 It also has
-                our latest-generation Ceramic Shield material that’s{" "}
-                <span className="text-white">
-                  two times tougher than any smartphone glass
-                </span>{" "}
-                Talk about durable.
-              </p>
+
+          <div className="screen-max-width">
+            <div className="text-container">
+              <div className="flex-1">
+                <p className="text-content">
+                  New display technology allows us to route display data under
+                  active pixels with no distortion, resulting in thinner borders
+                  for larger 6.3-inch and 6.9-inch{" "}
+                  <span className="text-white">Super Retina XDR displays</span>{" "}
+                  that feel great in the hand.
+                </p>
+              </div>
+              <div className="flex-1">
+                <p className="text-content">
+                  iPhone 16 Pro is splash, water, and dust resistant.
+                  <a href="#footnote-5" className="font-feature-settings">
+                    4
+                  </a>{" "}
+                  It also has our latest-generation Ceramic Shield material
+                  that’s{" "}
+                  <span className="text-white">
+                    two times tougher than any smartphone glass
+                  </span>{" "}
+                  Talk about durable.
+                </p>
+              </div>
             </div>
           </div>
         </div>

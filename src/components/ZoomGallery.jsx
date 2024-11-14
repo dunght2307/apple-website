@@ -126,9 +126,9 @@ const ZoomGallery = () => {
           style={{ backgroundImage: `url(${heroCameraMbImg})` }}
         >
           <h4 className="section-heading-2 text-center">
-            4K 120 fps
-            <br className="lg:hidden block" /> Dolby Vision.
-            <br /> Cinemasterful.
+            New 48MP
+            <br /> Ultra Wide camera.
+            <br /> Viva la resolution.
           </h4>
         </div>
         <div className="w-[50%] relative min-h-[420px] mt-10">

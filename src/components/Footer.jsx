@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="screen-max-width px-4">
         <div className="py-5">
           <ul className="mb-2">
-            <li className="text-white-200 text-xs">
+            <li id="footnote-1" className="text-white-200 text-xs">
               <span>*</span>Trade-in values will vary based on the condition,
               year, and configuration of your eligible trade‑in device. Not all
               devices are eligible for credit. You must be at least 18 years old
@@ -31,7 +31,10 @@ const Footer = () => {
             </li>
           </ul>
           <ol className="px-5">
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-2"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Available to qualified customers and requires 24‑month installment
               loan when you select Citizens One or Apple Card Monthly
               Installments (ACMI) as payment type at checkout at Apple. You’ll
@@ -59,7 +62,10 @@ const Footer = () => {
               </a>
               for information about upcoming changes to ACMI financing.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-3"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Apple Intelligence will be available in beta on all iPhone 16
               models, iPhone 15 Pro, iPhone 15 Pro Max, and iPad and Mac with M1
               and later, with Siri and device language set to U.S. English, as
@@ -71,14 +77,20 @@ const Footer = () => {
               Spanish, Vietnamese, and others, will be coming over the course of
               the next year.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-4"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Display size: The display has rounded corners that follow a
               beautiful curved design, and these corners are within a standard
               rectangle. When measured as a standard rectangular shape, the
               screen is 6.27 inches (iPhone 16 Pro) or 6.86 inches (iPhone 16
               Pro Max) diagonally. Actual viewable area is less.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-5"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               iPhone 16 Pro and iPhone 16 Pro Max are splash, water, and dust
               resistant and were tested under controlled laboratory conditions
               with a rating of IP68 under IEC standard 60529 (maximum depth of 6
@@ -88,14 +100,23 @@ const Footer = () => {
               user guide for cleaning and drying instructions. Liquid damage not
               covered under warranty.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-6"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Battery life increase based on the video playback hours of iPhone
               16 Pro Max compared to iPhone 15 Pro Max.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-7"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Accessories sold separately.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-8"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Testing conducted by Apple in August 2024 using preproduction
               iPhone 16 Pro and iPhone 16 Pro Max units and software, USB‑C
               Charge Cable with Apple USB-C Power Adapter (20W Model A2305), and
@@ -106,7 +127,10 @@ const Footer = () => {
               up. Charge time varies with settings and environmental factors;
               actual results will vary.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-9"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               All battery claims depend on network configuration and many other
               factors; actual results will vary. Battery has limited recharge
               cycles and may eventually need to be replaced. Battery life and
@@ -120,7 +144,10 @@ const Footer = () => {
               </a>{" "}
               for more information.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-10"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Roadside Assistance, Emergency SOS, and Messages via satellite are
               included for free for two years with the activation of any iPhone
               14 or later model. Connection and response times vary based on
@@ -132,7 +159,10 @@ const Footer = () => {
               </a>{" "}
               for more information.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-11"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Fees are determined by the roadside assistance provider, and can
               vary based on your location and the type of assistance provided.
               See{" "}
@@ -141,7 +171,10 @@ const Footer = () => {
               </a>{" "}
               for more information.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-12"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Service is included for free for two years with the activation of
               any iPhone 16 model. Connection and response times vary based on
               location, site conditions, and other factors. See
@@ -150,28 +183,46 @@ const Footer = () => {
               </a>{" "}
               for more information.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-13"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               iPhone 16 and iPhone 16 Pro can detect a severe car crash and call
               for help. Requires a cellular connection or Wi-Fi calling.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-14"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               On a mass balance allocation.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-15"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Breakdown of U.S. retail packaging by weight. Adhesives, inks, and
               coatings are excluded from our calculations of plastic content and
               packaging weight.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-16"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               This increase in boxes we can fit onto a pallet excludes pallets
               shipped to the following locations: U.S., Puerto Rico, U.S. Virgin
               Islands, Guam, and Canada.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-17"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Requires an iPhone and Apple Watch with second-generation Ultra
               Wideband chip. Ultra Wideband availability varies by region.
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-18"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Apple Card Monthly Installments (ACMI) is a 0% APR payment option
               that is only available if you select it at checkout in the U.S.
               for eligible products purchased at Apple Store locations,
@@ -227,7 +278,10 @@ const Footer = () => {
                 at 877‑255‑5923 with questions about Apple Card.
               </p>
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-19"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               <p className="mb-2">
                 <span href="" className="text-white-100">
                   AT&T iPhone 16 Special Deal:
@@ -379,7 +433,10 @@ const Footer = () => {
                 Verizon connectivity discount. Activation required.
               </p>
             </li>
-            <li className="text-white-200 text-xs list-decimal pb-2">
+            <li
+              id="footnote-20"
+              className="text-white-200 text-xs list-decimal pb-2"
+            >
               Battery life claim refers to larger models. All battery claims
               depend on network configuration and many other factors; actual
               results will vary. Battery has limited recharge cycles and may
@@ -396,12 +453,12 @@ const Footer = () => {
             </li>
           </ol>
           <ul>
-            <li className="text-white-200 text-xs mb-2">
+            <li id="footnote-21" className="text-white-200 text-xs mb-2">
               DEATH STRANDING DIRECTOR'S CUT © 2024 Sony Interactive
               Entertainment Inc. / KOJIMA PRODUCTIONS Co., Ltd. / HIDEO KOJIMA.
               Published by 505 Games.
             </li>
-            <li className="text-white-200 text-xs">
+            <li id="footnote-22" className="text-white-200 text-xs">
               <p className="mb-2">
                 Features are subject to change. Some features, applications, and
                 services may not be available in all regions or all languages.

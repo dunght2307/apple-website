@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   aNewEraForSiriVideo,
   appleIntelligence1Img,
@@ -15,8 +15,11 @@ import {
   iphoneImg,
   languageImg,
   messagesImg,
+  pauseIcon,
   playgroundAppImg,
+  playIcon,
   recordImg,
+  replayIcon,
   rightImg,
 } from "../utils";
 import gsap from "gsap";
@@ -25,25 +28,43 @@ import { appleIntelligenceGallery } from "../constants";
 const AppleIntelligence = () => {
   const videoRef = useRef();
   const video2Ref = useRef();
-  const [current, setCurrent] = useState("Boost your productivity");
+  const [current, setCurrent] = useState(1);
+
+  const [isPlaying, setPlaying] = useState(true);
+  const [isEnd, setEnd] = useState(false);
+  const video3Ref = useRef([]);
+
+  useEffect(() => {
+    isPlaying
+      ? video3Ref.current[current - 1]?.play()
+      : video3Ref.current[current - 1]?.pause();
+  }, [current, isPlaying]);
+
+  const handleClick = () => {
+    setPlaying(!isPlaying);
+    setEnd(false);
+  };
 
   useGSAP(() => {
     gsap.to("#aiVideo", {
       scrollTrigger: {
         trigger: "#aiVideo",
-        toggleActions: "play reverse restart restart",
-        start: "-10% 85%",
+        toggleActions: "restart reverse restart reverse",
+        start: "top 80%",
       },
       onComplete: () => {
         videoRef.current.play();
       },
     });
 
-    gsap.to("#aiVideo", {
+    gsap.to("#ai2Video", {
       scrollTrigger: {
         trigger: "#ai2Video",
-        toggleActions: "play reverse restart restart",
-        start: "0 85%",
+        toggleActions: "restart reverse restart reverse",
+        start: "top 50%",
+        duration: 1,
+        stagger: 0.25,
+        // markers: true,
       },
       onComplete: () => {
         video2Ref.current.play();
@@ -59,7 +80,6 @@ const AppleIntelligence = () => {
             className="lg:max-w-full sm:max-w-[140%] md:block hidden"
             preload="none"
             muted
-            autoPlay
             playsInline
             ref={videoRef}
           >
@@ -73,8 +93,8 @@ const AppleIntelligence = () => {
         </div>
         <p className="mt-4 text-sm lg:text-lg text-gray">
           Coming this fall{" "}
-          <a href="" className="font-feature-settings">
-            2
+          <a href="#footnote-6" className="font-feature-settings">
+            5
           </a>
         </p>
         <div className="screen-max-width flex-center overflow-hidden pt-8">
@@ -83,7 +103,6 @@ const AppleIntelligence = () => {
             className="lg:max-w-full sm:max-w-[100%] lg:block hidden"
             preload="none"
             muted
-            autoPlay
             playsInline
             ref={video2Ref}
           >
@@ -116,11 +135,11 @@ const AppleIntelligence = () => {
                   <li
                     key={index}
                     className={`block text-lg text-gray font-semibold py-4 px-8 border-b-[1px] border-[#424245] cursor-pointer ${
-                      item.title === current
+                      index + 1 === current
                         ? "border-b-[1px] border-[#fff] text-white"
                         : "border-b-[1px] border-[#424245]"
                     }`}
-                    onClick={() => setCurrent(item.title)}
+                    onClick={() => setCurrent(index + 1)}
                   >
                     {item.title}
                   </li>
@@ -131,7 +150,7 @@ const AppleIntelligence = () => {
                   <div
                     key={index}
                     className={`transition-all duration-500 flex-center flex-col lg:absolute relative overflow-hidden top-0 left-0 ${
-                      current === gallery.title
+                      current === index + 1
                         ? "z-[2] opacity-100"
                         : "z-[1] lg:opacity-0"
                     }`}
@@ -142,7 +161,7 @@ const AppleIntelligence = () => {
                     <div className="min-h-[60px]">
                       <h4
                         className={`text-center text-lg lg:text-xl font-semibold ${
-                          current === gallery.title
+                          current === index + 1
                             ? "block animate-[fadeAnimation_400ms_ease-in-out]"
                             : "lg:hidden"
                         }`}
@@ -152,28 +171,58 @@ const AppleIntelligence = () => {
                     </div>
                     <div className="w-full h-full flex-col lg:flex-row flex gap-6">
                       <div className="flex-1 flex-center flex-col overflow-hidden bg-black rounded-3xl">
-                        <div className="lg:w-full lg:max-w-[250px] max-w-[200px] flex-1 flex-center relative overflow-hidden z-[1] mt-10 rounded-[48px]">
-                          <img src={iphoneImg} alt="" className="h-full" />
-                          {gallery.item1.video && (
-                            <video
-                              className="lg:max-w-[91.32948%] lg:block hidden absolute top-[2.10084%] left-[4.62428%] z-[-1]"
-                              preload="none"
-                              muted
-                              autoPlay
-                              playsInline
-                            >
-                              <source
-                                src={gallery.item1.video}
-                                type="video/mp4"
+                        <div className="w-full relative">
+                          <div className="lg:w-full lg:max-w-[250px] max-w-[200px] flex-1 flex-center relative overflow-hidden z-[1] mt-10 mx-auto">
+                            <img src={iphoneImg} alt="" className="h-full" />
+                            {gallery.item1.video && (
+                              <video
+                                className="lg:max-w-[92%] lg:block hidden absolute top-[2%] left-[4%] z-[-1] rounded-3xl"
+                                preload="none"
+                                muted
+                                autoPlay
+                                playsInline
+                                ref={(el) => (video3Ref.current[index] = el)}
+                                onEnded={() => {
+                                  setPlaying(false);
+                                  setEnd(true);
+                                }}
+                              >
+                                <source
+                                  src={gallery.item1.video}
+                                  type="video/mp4"
+                                />
+                              </video>
+                            )}
+
+                            {gallery.item1.img && (
+                              <img
+                                src={gallery.item1.img}
+                                alt=""
+                                className="max-w-[92%] absolute top-[2%] left-[4%] z-[-2] rounded-3xl"
                               />
-                            </video>
-                          )}
-                          {gallery.item1.img && (
-                            <img
-                              src={gallery.item1.img}
-                              alt=""
-                              className="max-w-[91.32948%] absolute top-[2.10084%] left-[4.62428%] z-[-1]"
-                            />
+                            )}
+                          </div>
+                          {gallery.item1.video && (
+                            <button
+                              className={`bg-[#d2d2d7a3] rounded-full absolute right-20 bottom-0 ${
+                                current === index + 1
+                                  ? "lg:block animate-[fadeAnimation_500ms_ease-in-out] hidden"
+                                  : "hidden"
+                              }`}
+                            >
+                              <img
+                                src={
+                                  isEnd
+                                    ? replayIcon
+                                    : !isPlaying
+                                    ? playIcon
+                                    : pauseIcon
+                                }
+                                alt=""
+                                className="h-[36px] max-w-[36px]"
+                                onClick={() => handleClick()}
+                              />
+                            </button>
                           )}
                         </div>
 
@@ -234,8 +283,10 @@ const AppleIntelligence = () => {
             </div>
             <div className="flex-center flex-col lg:mt-8 mt-20">
               <div className="flex-center flex-col gap-10 lg:max-w-[50%] max-w-full">
-                <img src={iconPrivacyImg} alt="" />
-                <h3 className="lg:text-6xl sm:text-5xl text-4xl font-semibold text-center">
+                <div className="w-full">
+                  <img src={iconPrivacyImg} alt="" className="md:mx-auto" />
+                </div>
+                <h3 className="lg:text-6xl sm:text-5xl text-4xl font-semibold md:text-center text-left">
                   Great powers come with great privacy.
                 </h3>
               </div>
@@ -253,7 +304,7 @@ const AppleIntelligence = () => {
                 </div>
                 <div className="flex-1">
                   <p className="text-content">
-                    And with
+                    And with{" "}
                     <span className="text-white">
                       groundbreaking Private Cloud Compute
                     </span>{" "}

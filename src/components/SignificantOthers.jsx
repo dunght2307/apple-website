@@ -29,7 +29,7 @@ const SignificantOthers = () => {
               {SignificantOthersList.map((item, index) => (
                 <li key={index} className="flex flex-col overflow-hidden">
                   <div
-                    className="flex justify-between items-center pt-8 pb-4"
+                    className="flex justify-between items-center pt-8 pb-4 cursor-pointer"
                     onClick={() => handleClick(item)}
                   >
                     <h3 className="text-2xl lg:text-3xl font-semibold">
@@ -39,7 +39,7 @@ const SignificantOthers = () => {
                     <img
                       src={downImg}
                       alt="prev"
-                      className={`max-w-[25px] h-[25px] transition-all ease-in-out duration-500 ${
+                      className={`max-w-[28px] h-[28px] transition-all ease-in-out duration-500 ${
                         current === index + 1
                           ? "[transform:rotateX(180deg)]"
                           : ""
@@ -53,7 +53,7 @@ const SignificantOthers = () => {
                   >
                     <p
                       id="description"
-                      className={`text-gray text-sm lg:text-lg pr-[25px] transition-all ease-in-out duration-500`}
+                      className={`text-white opacity-90 text-sm lg:text-lg pr-[25px] transition-all ease-in-out duration-500`}
                     >
                       {item.desc}
                     </p>

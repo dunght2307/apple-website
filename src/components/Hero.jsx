@@ -41,7 +41,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full xl:h-[120vh] lg:h-[110vh] h-[100vh] relative overflow-hidden">
+    <section className="w-full xl:h-[120vh] lg:h-[110vh] h-[100vh] min-h-[800px] relative overflow-hidden">
       <div className="w-full h-full flex items-center justify-between flex-col gap-8 absolute z-[2] top-0 pt-40 lg:pb-40 md:pb-32 pb-24">
         <div
           id="hero"
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         <div
           id="cta"
-          className="lg:pb-10 flex flex-col items-center opacity-0 translate-y-20"
+          className="flex flex-col items-center opacity-0 translate-y-20"
         >
           <a href="#hightlights" className="btn">
             Buy
@@ -65,7 +65,7 @@ const Hero = () => {
               1
             </a>
           </p>
-          <p className="lg:text-lg font-normal text-gray relative">
+          <p className="lg:text-lg font-normal text-gray mt-1">
             Apple Intelligence coming this fall{" "}
             <a href="#footnote-3" className="font-feature-settings">
               2
@@ -73,12 +73,12 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="w-screen absolute z-[1] top-0 max-sm:top-[100px] left-0 flex-center">
+      <div className="w-screen absolute z-[1] top-10 max-sm:top-[120px] left-0 flex-center">
         <video
           className="pointer-events-none max-w-[115%] sm:max-w-[140%] lg:max-w-[110%] xl:max-w-full"
-          preload="none"
           muted
           autoPlay
+          preload="none"
           playsInline
           key={videoSrc}
         >

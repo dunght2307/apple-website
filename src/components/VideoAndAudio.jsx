@@ -135,9 +135,9 @@ const VideoAndAudio = () => {
               </p>
             </div>
             <div className="flex-1 flex gap-6  lg:gap-10 w-full flex-col">
-              <p className="text-3xl sm:text-4xl lg:text-5xl text-gray font-semibold md:min-h-[230px] max-w-64 md:max-w-full">
-                <span className="text-white">Highest-quality video</span> in a
-                smartphone
+              <p className="text-3xl sm:text-4xl lg:text-5xl text-gray font-semibold md:min-h-[230px]">
+                <span className="text-white">Highest-quality video</span>
+                <br className="lg:block hidden" /> in a smartphone
               </p>
               <p className="text-content">
                 iPhone 16 Pro also provides{" "}
@@ -212,10 +212,10 @@ const VideoAndAudio = () => {
         </div>
 
         <div className="flex-center flex-col">
-          <h4 className="section-heading-3 text-center lg:mt-40 mt-24">
+          <h4 className="section-heading-3 w-full text-left md:text-center lg:mt-40 mt-24">
             Shot on iPhone 16 Pro.
           </h4>
-          <p className="text-content mt-4 lg:max-w-[66.66%] text-center">
+          <p className="text-content mt-4 lg:max-w-[66.66%] text-left md:text-center">
             Go behind the scenes of{" "}
             <span className="text-white">
               The Weeknd’s groundbreaking music video

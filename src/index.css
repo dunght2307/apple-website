@@ -85,11 +85,11 @@ canvas {
   }
 
   .size-btn-container {
-    @apply flex items-center justify-center p-2 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1;
+    @apply flex items-center justify-center p-[5px] rounded-full bg-gray-300 backdrop-blur ml-3 gap-1;
   }
 
   .size-btn {
-    @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all;
+    @apply w-12 h-12 text-lg flex justify-center items-center text-black rounded-full transition-all;
   }
 
   .viewport-content {
@@ -97,15 +97,15 @@ canvas {
   }
 
   .section {
-    @apply lg:py-40 py-20 overflow-hidden;
+    @apply lg:py-40 py-24 overflow-hidden;
   }
 
   .section-pt {
-    @apply lg:pt-40 pt-20 overflow-hidden;
+    @apply lg:pt-40 pt-24 overflow-hidden;
   }
 
   .section-pb {
-    @apply lg:pb-40 pb-20 overflow-hidden;
+    @apply lg:pb-40 pb-24 overflow-hidden;
   }
 
   .section-heading {
@@ -136,11 +136,11 @@ canvas {
   }
 
   .link {
-    @apply text-blue hover:underline cursor-pointer flex items-center text-sm lg:text-lg font-semibold transition-all;
+    @apply text-blue hover:underline cursor-pointer flex items-center text-sm lg:text-lg font-medium transition-all;
   }
 
   .control-btn {
-    @apply mr-2 p-4 rounded-full bg-gray-300 backdrop-blur flex-center;
+    @apply mr-2 rounded-full bg-gray-300 backdrop-blur flex-center opacity-90 hover:opacity-100;
   }
 
   .hero-title {

@@ -589,25 +589,29 @@ export const prolensSides = [
 export const models = [
   {
     id: 1,
-    title: "iPhone 15 Pro in Natural Titanium",
+    title1: "6.3” iPhone 16 Pro in Natural Titanium",
+    title2: "6.9” iPhone 16 Pro Max in Natural Titanium",
     color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
     img: yellowImg,
   },
   {
     id: 2,
-    title: "iPhone 15 Pro in Blue Titanium",
+    title1: "6.3” iPhone 16 Pro in Blue Titanium",
+    title2: "6.9” iPhone 16 Pro Max in Natural Titanium",
     color: ["#53596E", "#6395ff", "#21242e"],
     img: blueImg,
   },
   {
     id: 3,
-    title: "iPhone 15 Pro in White Titanium",
+    title1: "6.3” iPhone 16 Pro in White Titanium",
+    title2: "6.9” iPhone 16 Pro Max in Natural Titanium",
     color: ["#C9C8C2", "#ffffff", "#C9C8C2"],
     img: whiteImg,
   },
   {
     id: 4,
-    title: "iPhone 15 Pro in Black Titanium",
+    title1: "6.3” iPhone 16 Pro in Black Titanium",
+    title2: "6.9” iPhone 16 Pro Max in Natural Titanium",
     color: ["#454749", "#3b3b3b", "#181819"],
     img: blackImg,
   },
@@ -616,7 +620,7 @@ export const models = [
 export const modelsFM = [
   {
     id: 0,
-    title: "6.3” iPhone 16 Pro3 in four colors",
+    title: "6.3” iPhone 16 Pro in four colors",
     color: "",
     img: allColorsImg,
   },
@@ -712,13 +716,13 @@ export const SignificantOthersList = [
   {
     id: 1,
     title: "iPhone and Mac",
-    desc: "Misplaced your iPhone? The latest Apple Watch models can show you its approximate distance and direction.16 To set up a group photo on your iPhone, join the group and use Apple Watch as a viewfinder to snap the shot. And when you take a call on your Apple Watch, just tap your iPhone to continue the conversation there.",
+    desc: "With iPhone Mirroring, you can view your iPhone screen on your Mac and control it without picking up your phone. Continuity features also let you answer calls or messages right from your Mac. You can even copy images, video, or text from your iPhone and paste it all into a different app on your Mac. And with iCloud, you can access your files from either device.",
     img: iphoneMacImg,
   },
   {
     id: 2,
     title: "iPhone and Apple Watch",
-    desc: "With iPhone Mirroring, you can view your iPhone screen on your Mac and control it without picking up your phone. Continuity features also let you answer calls or messages right from your Mac. You can even copy images, video, or text from your iPhone and paste it all into a different app on your Mac. And with iCloud, you can access your files from either device.",
+    desc: "Misplaced your iPhone? The latest Apple Watch models can show you its approximate distance and direction.16 To set up a group photo on your iPhone, join the group and use Apple Watch as a viewfinder to snap the shot. And when you take a call on your Apple Watch, just tap your iPhone to continue the conversation there.",
     img: iphoneApplewatchImg,
   },
   {
@@ -944,6 +948,7 @@ export const footerNav = [
 
 export const appleIntelligenceGallery = [
   {
+    id: 1,
     title: "Boost your productivity",
     heading: "Explore new tools that help you write, focus, and communicate.",
     item1: {
@@ -973,6 +978,7 @@ export const appleIntelligenceGallery = [
     },
   },
   {
+    id: 2,
     title: "Express yourself visually",
     heading: "Create fun, original images that are truly personal to you.",
     item1: {
@@ -1003,6 +1009,7 @@ export const appleIntelligenceGallery = [
     },
   },
   {
+    id: 3,
     title: "A new era for Siri",
     heading:
       "With all-new superpowers, Siri will be able to assist you like never before.",

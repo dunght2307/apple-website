@@ -20,8 +20,8 @@ const IncentiveBackgroundAlt = () => {
     });
   }, []);
 
-  const scrollContainerRef = useRef(null);
-  const scrollItemRef = useRef(null);
+  const scrollContainerRef = useRef();
+  const scrollItemRef = useRef();
   const [current, setCurrent] = useState(1);
 
   const next = () => {
@@ -34,9 +34,9 @@ const IncentiveBackgroundAlt = () => {
         left: nextScrollLeft,
       });
     }
-    current < FeatureList.length
+    current < IncentiveBackgroundAltList.length
       ? setCurrent(current + 1)
-      : setCurrent(FeatureList.length);
+      : setCurrent(IncentiveBackgroundAltList.length);
   };
   const prev = () => {
     const container = scrollContainerRef.current;
@@ -71,31 +71,31 @@ const IncentiveBackgroundAlt = () => {
         </div>
       </div>
 
-      <div className="relative">
-        <ul
-          className="flex gap-6 scroll-smooth overflow-x-auto 
-            snap-x snap-mandatory no-scrollbar px-[150px]
+      <ul
+        className="flex gap-6 scroll-smooth overflow-x-auto 
+            snap-x snap-mandatory no-scrollbar px-[150px] py-2
           "
-          ref={scrollContainerRef}
-        >
-          {IncentiveBackgroundAltList.map((item, index) => (
-            <li
-              key={index}
-              className="w-[280px] lg:w-[380px] bg-black p-8 rounded-3xl relative pb-12 snap-center cursor-pointer shrink-0"
-              ref={scrollItemRef}
-            >
-              <img src={item.icon} alt="" />
-              <h3 className="text-xl lg:text-2xl font-semibold py-5">
-                {item.title}
-              </h3>
-              <p>{item.desc}</p>
-              <div className="flex-center absolute bottom-5 right-5 w-[36px] h-[36px] bg-[#e8e8ec] rounded-full">
-                <img src={item.btn} alt="" />
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div className="viewport-content flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
+        ref={scrollContainerRef}
+      >
+        {IncentiveBackgroundAltList.map((item, index) => (
+          <li
+            key={index}
+            className="w-[280px] lg:w-[380px] bg-black p-8 rounded-3xl relative pb-12 snap-center cursor-pointer shrink-0 hover:scale-[1.02] duration-500 transition-all"
+            ref={scrollItemRef}
+          >
+            <img src={item.icon} alt="" />
+            <h3 className="text-xl lg:text-2xl font-semibold py-5">
+              {item.title}
+            </h3>
+            <p className="text-sm lg:text-lg">{item.desc}</p>
+            <div className="flex-center absolute bottom-5 right-5 w-[36px] h-[36px] bg-[#e8e8ec] rounded-full">
+              <img src={item.btn} alt="" />
+            </div>
+          </li>
+        ))}
+      </ul>
+      <div className="viewport-content">
+        <div className="flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
           <button
             onClick={() => prev()}
             disabled={current === 1}

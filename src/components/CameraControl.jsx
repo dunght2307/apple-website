@@ -10,6 +10,7 @@ import {
   prevImg,
   replayIcon,
   replayImg,
+  rightImg,
 } from "../utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -26,10 +27,12 @@ const CameraControl = () => {
       scrollTrigger: {
         trigger: "#cameraControlVideo",
         toggleActions: "play reverse restart restart",
-        start: "-10% 85%",
+        start: "top 80%",
       },
       onComplete: () => {
         videoCameraControlRef.current.play();
+        setVideoPlaying(true);
+        setVideoEnd(false);
       },
     });
     animateWithGsap("#cameraControlTitle", {
@@ -74,7 +77,7 @@ const CameraControl = () => {
       current < CameraControlList.length
         ? setCurrent(current + 1)
         : setCurrent(CameraControlList.length);
-      setPlaying(!isPlaying);
+      setPlaying(true);
       setEnd(false);
     }
   };
@@ -87,7 +90,7 @@ const CameraControl = () => {
         left: nextScrollLeft,
       });
       current > 1 ? setCurrent(current - 1) : setCurrent(1);
-      setPlaying(!isPlaying);
+      setPlaying(true);
       setEnd(false);
     }
   };
@@ -111,7 +114,7 @@ const CameraControl = () => {
       </div>
       <div className="flex flex-col justify-center items-center gap-5">
         <button
-          className="text-lg hover:underline items-end justify-center gap-1 font-medium text-center mt-3 lg:flex hidden"
+          className="text-lg hover:underline items-center justify-center gap-1 font-medium text-center mt-3 lg:flex hidden"
           onClick={() => handleControl()}
         >
           {videoEnd ? (
@@ -124,7 +127,7 @@ const CameraControl = () => {
           <img
             src={videoEnd ? replayImg : !videoPlaying ? playImg : pauseImg}
             alt=""
-            className="w-[18px] h-[18px]"
+            className="w-[28px] h-[28px] -ml-2"
           />
         </button>
 
@@ -175,69 +178,72 @@ const CameraControl = () => {
                 with a light press — so you can reframe your shot without losing
                 focus on your subject.
               </p>
+              <a className="link mt-6">
+                How to use Camera Control
+                <img src={rightImg} alt="watch" className="ml-2" />
+              </a>
             </div>
           </div>
         </div>
-        <div className="relative">
-          <ul
-            className="flex gap-6 scroll-smooth overflow-x-auto 
+
+        <ul
+          className="flex gap-6 scroll-smooth overflow-x-auto 
             snap-x snap-mandatory no-scrollbar px-[14%]
           "
-            ref={scrollContainerRef}
-          >
-            {CameraControlList.map((item, i) => (
-              <li
-                key={i}
-                className="w-[280px] sm:w-[450px] lg:w-[550px] snap-center cursor-pointer shrink-0"
-                ref={scrollItemRef}
-              >
-                <img
-                  src={item.img}
-                  alt=""
-                  className="w-full rounded-3xl lg:hidden block"
-                />
-                <div className="hidden lg:block relative">
-                  <video
-                    id="cameraControlItemVideo"
-                    className="w-full rounded-3xl"
-                    playsInline={true}
-                    preload="auto"
-                    muted
-                    ref={(el) => (videoRef.current[i] = el)}
-                    onEnded={() => {
-                      setPlaying(false);
-                      setEnd(true);
-                    }}
-                  >
-                    <source src={item.video} type="video/mp4" />
-                  </video>
-                  <button
-                    className={`bg-[#d2d2d7a3] rounded-full absolute right-5 bottom-5 ${
-                      current === i + 1
-                        ? "block animate-[fadeAnimation_500ms_ease-in-out]"
-                        : "hidden"
-                    }`}
-                  >
-                    <img
-                      src={
-                        isEnd ? replayIcon : !isPlaying ? playIcon : pauseIcon
-                      }
-                      alt=""
-                      className="h-[36px] max-w-[36px]"
-                      onClick={() => handleClick()}
-                    />
-                  </button>
-                </div>
+          ref={scrollContainerRef}
+        >
+          {CameraControlList.map((item, i) => (
+            <li
+              key={i}
+              className="w-[280px] sm:w-[450px] lg:w-[550px] snap-center cursor-pointer shrink-0"
+              ref={scrollItemRef}
+            >
+              <img
+                src={item.img}
+                alt=""
+                className="w-full rounded-3xl lg:hidden block"
+              />
+              <div className="hidden lg:block relative">
+                <video
+                  id="cameraControlItemVideo"
+                  className="w-full rounded-3xl"
+                  playsInline={true}
+                  preload="auto"
+                  muted
+                  ref={(el) => (videoRef.current[i] = el)}
+                  onEnded={() => {
+                    setPlaying(false);
+                    setEnd(true);
+                  }}
+                >
+                  <source src={item.video} type="video/mp4" />
+                </video>
+                <button
+                  className={`bg-[#d2d2d7a3] rounded-full absolute right-5 bottom-5 ${
+                    current === i + 1
+                      ? "block animate-[fadeAnimation_500ms_ease-in-out]"
+                      : "hidden"
+                  }`}
+                >
+                  <img
+                    src={isEnd ? replayIcon : !isPlaying ? playIcon : pauseIcon}
+                    alt=""
+                    className="h-[36px] max-w-[36px]"
+                    onClick={() => handleClick()}
+                  />
+                </button>
+              </div>
 
-                <p className="p-5 sm:p-8 text-gray text-lg font-semibold">
-                  {item.title[0]}
-                  <span className="text-white">{item.title[1]}</span>
-                  {item.title[2]}
-                </p>
-              </li>
-            ))}
-          </ul>
-          <div className="viewport-content flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
+              <p className="p-5 sm:p-8 text-gray text-sm md:text-lg font-semibold">
+                {item.title[0]}
+                <span className="text-white">{item.title[1]}</span>
+                {item.title[2]}
+              </p>
+            </li>
+          ))}
+        </ul>
+        <div className="viewport-content">
+          <div className="flex items-center justify-end lg:mt-16 sm:mt-10 mt-8">
             <button
               onClick={() => prev()}
               disabled={current === 1}

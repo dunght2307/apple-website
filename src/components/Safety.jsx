@@ -41,7 +41,10 @@ const Safety = () => {
                     lets you send and receive messages and Tapbacks when you’re
                     off the grid, right from the Messages app. Your iPhone will
                     help you connect to a satellite, so you can text over
-                    iMessage or SMS.
+                    iMessage or SMS.{" "}
+                    <a href="#footnote-10" className="font-feature-settings">
+                      9
+                    </a>
                   </p>
                   <p className="text-content">
                     <span className="text-white">
@@ -50,15 +53,21 @@ const Safety = () => {
                     can get you help for things like a flat tire or a dead car
                     battery. iPhone will connect you with a roadside assistance
                     provider, who can dispatch help to your exact location —
-                    even if you’re off the grid.10
+                    even if you’re off the grid.{" "}
+                    <a href="#footnote-11" className="font-feature-settings">
+                      10
+                    </a>
                   </p>
-                  <a className="flex w-full text-blue transition-all hover:underline text-xl font-semibold">
-                    Learn more about iOS 18
+                  <a className="w-full text-blue transition-all hover:underline lg:text-xl text-lg font-semibold">
+                    See how Roadside Assistance works
                     <img src={rightImg} alt="" className="ml-2 inline" />
                   </a>
                   <p className="lg:text-3xl text-xl text-white font-semibold">
                     Roadside Assistance via satellite is included for free for
-                    two years with iPhone 16 Pro9
+                    two years with iPhone 16 Pro{" "}
+                    <a href="#footnote-10" className="font-feature-settings">
+                      9
+                    </a>
                   </p>
                 </div>
                 <div className="flex-1 flex-center w-full">
@@ -72,7 +81,10 @@ const Safety = () => {
                     lives. If you try calling 911 for urgent help but don’t have
                     cell service or Wi‑Fi, you can use iPhone to
                     <span className="text-white">
-                      text emergency services over satellite
+                      text emergency services over satellite{" "}
+                      <a href="#footnote-12" className="font-feature-settings">
+                        11
+                      </a>
                     </span>
                   </p>
                   <a className="w-full text-blue transition-all hover:underline lg:text-xl text-lg font-semibold">
@@ -85,7 +97,10 @@ const Safety = () => {
                     <span className="text-white">Crash Detection</span> uses
                     hardware sensors and advanced motion algorithms to detect a
                     severe car crash, then call 911 and notify your emergency
-                    contacts when you can’t — even when you don’t have service.
+                    contacts when you can’t — even when you don’t have service.{" "}
+                    <a href="#footnote-13" className="font-feature-settings">
+                      12
+                    </a>
                   </p>
                 </div>
               </div>
@@ -95,7 +110,10 @@ const Safety = () => {
                   16 Pro gives you the option to start sharing a live feed with
                   911 responders for{" "}
                   <span className="text-white">
-                    quick and effective assistance.
+                    quick and effective assistance.{" "}
+                    <a href="#footnote-10" className="font-feature-settings">
+                      9
+                    </a>
                   </span>
                 </p>
               </div>

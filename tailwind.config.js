@@ -35,6 +35,7 @@ export default {
         orange: {
           DEFAULT: "#b38a6e",
           100: "#c8c2bd",
+          200: "#d3b5a4",
         },
         zinc: "#1d1d1f",
       },

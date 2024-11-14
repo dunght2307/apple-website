@@ -64,7 +64,10 @@ const Contract = () => {
               </h2>
               <p className="text-xs text-[#ff791b]">New</p>
               <p className="text-sm lg:text-lg font-semibold">
-                From $999 or $41.62/mo. for 24 mo.*
+                From $999 or $41.62/mo. for 24 mo.{" "}
+                <a href="#footnote-2" className="font-feature-settings">
+                  1
+                </a>
               </p>
               <div className="flex flex-col items-center gap-10">
                 <span className="text-sm lg:text-lg py-3">
@@ -88,7 +91,10 @@ const Contract = () => {
               <h2 className="text-xl lg:text-3xl font-semibold">iPhone 16</h2>
               <p className="text-xs text-[#ff791b]">New</p>
               <p className="text-sm lg:text-lg font-semibold">
-                From $799 or $33.29/mo. for 24 mo.*
+                From $799 or $33.29/mo. for 24 mo.{" "}
+                <a href="#footnote-2" className="font-feature-settings">
+                  1
+                </a>
               </p>
               <div className="flex flex-col items-center gap-10">
                 <span className="text-sm lg:text-lg px-5 py-3 rounded-3xl bg-blue opacity-90 hover:opacity-100">
@@ -141,7 +147,10 @@ const Contract = () => {
                 <img src={iconBattery} alt="" />
                 <p className="text-xs font-semibold text-center">
                   Up to 29 hours video
-                  <br /> playback
+                  <br /> playback{" "}
+                  <a href="#footnote-20" className="font-feature-settings">
+                    19
+                  </a>
                 </p>
               </div>
             </div>
@@ -184,7 +193,10 @@ const Contract = () => {
                 <img src={iconBattery} alt="" />
                 <p className="text-xs font-semibold text-center">
                   Up to 26 hours video
-                  <br /> playback
+                  <br /> playback{" "}
+                  <a href="#footnote-20" className="font-feature-settings">
+                    19
+                  </a>
                 </p>
               </div>
             </div>

@@ -37,7 +37,13 @@ const Battery = () => {
               A <span className="text-glow">huge leap</span>
               in battery life.
               <br className="hidden lg:block" />
-              <span className="text-glow">Stellar.</span>
+              <span className="text-glow">Stellar.</span>{" "}
+              <a
+                href="#footnote-6"
+                className="font-feature-settings relative text-4xl -top-8 -left-4"
+              >
+                5
+              </a>
             </h4>
           </div>
           <div className="text-container mt-16">
@@ -57,8 +63,14 @@ const Battery = () => {
                 <span className="text-white">
                   even faster wireless charging
                 </span>{" "}
+                <a href="#footnote-7" className="font-feature-settings">
+                  6
+                </a>{" "}
                 — up to 25W with a 30W power adapter or higher, enabling up to
-                50% charge in around 30 minutes.
+                50% charge in around 30 minutes.{" "}
+                <a href="#footnote-8" className="font-feature-settings">
+                  7
+                </a>{" "}
               </p>
             </div>
             <div className="flex gap-6 lg:gap-10 w-[200px] flex-col">
@@ -66,13 +78,19 @@ const Battery = () => {
                 Up to
                 <br />
                 <span className="text-white text-5xl">33 hours</span>
-                <br /> video playback on iPhone 16 Pro Max
+                <br /> video playback on iPhone 16 Pro Max{" "}
+                <a href="#footnote-9" className="font-feature-settings">
+                  8
+                </a>
               </p>
               <p className="text-lg text-gray font-semibold">
                 Up to
                 <br />
                 <span className="text-white text-5xl">27 hours</span>
-                <br /> video playback on iPhone 16 Pro
+                <br /> video playback on iPhone 16 Pro{" "}
+                <a href="#footnote-9" className="font-feature-settings">
+                  8
+                </a>
               </p>
             </div>
           </div>
